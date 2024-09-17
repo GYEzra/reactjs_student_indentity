@@ -1,0 +1,120 @@
+:root {
+  --icons-color: #4c5773;
+  --icons-light-color: #4c577341;
+  --icons-bg-color: #e2e6e9;
+  --shadow-dark-color: #d3dae7;
+  --shadow-light-color: #fff;
+  --main-bg-color: #ecf0f3;
+  --dropdown-bg-color: #ffffff;
+  --profile-bg-color: #f0f0f0;
+  --highlight-color: #0871a6;
+
+  --box-shadow: 0 4px 8px var(--shadow-dark-color), 0 1px 4px var(--shadow-light-color);
+  --box-shadow-2: 0 2px 4px var(--shadow-dark-color);
+}
+
+.trending-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--main-bg-color);
+  border-radius: 12px;
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+}
+
+.topTreding {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.tabs {
+  display: flex;
+  margin-bottom: 10px;
+  left: auto;
+  background-color: var(--icons-bg-color);
+  border-radius: 10px;
+}
+
+.tabs button {
+  padding: 12px 25px;
+  margin: 0 10px;
+  border: none;
+  background-color: var(--icons-bg-color);
+  color: var(--icons-color);
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.tabs button:hover {
+  background-color: var(--profile-bg-color);
+  transform: scale(1.05);
+}
+
+.active-tab {
+  background-color: var(--highlight-color);
+  color: white;
+}
+
+.timeframes {
+  display: flex;
+  padding-left: 300px;
+  justify-content: center;
+  
+}
+
+.timeframes button {
+  padding: 8px 20px;
+  margin: 0 6px;
+  border: none;
+  background-color: var(--icons-bg-color);
+  color: var(--icons-color);
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.timeframes button:hover {
+  background-color: var(--icons-light-color);
+  transform: scale(1.05);
+}
+
+.active-timeframe {
+  background-color: var(--highlight-color);
+  color: white;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 15px 20px;
+  text-align: left;
+  border-bottom: 1px solid var(--icons-light-color);
+}
+
+th {
+  background-color: var(--dropdown-bg-color);
+  font-weight: bold;
+}
+
+.collection-image {
+  width: 40px;
+  height: 40px;
+  margin-right: 12px;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+
+tr:hover {
+  background-color: var(--icons-bg-color);
+}

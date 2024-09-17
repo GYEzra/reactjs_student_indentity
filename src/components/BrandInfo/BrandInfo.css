@@ -1,0 +1,49 @@
+.brand-info-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    height: 100vh;
+  }
+  
+  .brand-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .brand-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px;
+  }
+  
+  .brand-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .brand-content p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #555;
+  }
+  
+  .learn-more-button {
+    padding: 15px 40px;
+    background-color: black;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .learn-more-button:hover {
+    background-color: #333;
+  }
+  

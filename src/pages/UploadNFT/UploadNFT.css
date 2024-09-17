@@ -1,0 +1,90 @@
+:root {
+    --icons-color: #4c5773;
+    --icons-light-color: #4c577341;
+    --icons-bg-color: #e2e6e9;
+    --shadow-dark-color: #d3dae7;
+    --shadow-light-color: #fff;
+    --main-bg-color: #ecf0f3;
+    --dropdown-bg-color: #ffffff;
+    --profile-bg-color: #f0f0f0;
+    --highlight-color: #0871a6;
+  
+    --box-shadow: 1rem 1rem 1rem var(--shadow-dark-color),
+    -1rem -1rem 1rem var(--shadow-light-color);
+  
+    --box-shadow-2: 0rem 0rem 0rem var(--shadow-dark-color),
+    -.3rem -.3rem 1rem var(--shadow-dark-color);
+}
+
+.upload-nft {
+    width: 100%;
+    margin: 4rem auto;
+    padding: 2rem;
+}
+
+.upload-nft-box {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+}
+
+.upload-nft-box-heading {
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+.upload-nft-box-heading h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    color: var(--highlight-color);
+}
+
+.upload-nft-box-heading p {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    color: #555;
+}
+
+.upload-nft-box-title {
+    border-bottom: 1px solid var(--shadow-dark-color);
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+.upload-nft-box-title h2 {
+    font-size: 2.2rem;
+    line-height: 1.4;
+    color: var(--highlight-color);
+}
+
+.upload-nft-box-title p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #666;
+}
+
+@media screen and (max-width: 35em) {
+    .upload-nft {
+        margin: 2rem;
+        padding: 1rem;
+    }
+    .upload-nft-box {
+        width: 100%;
+        padding: 1rem;
+    }
+    .upload-nft-box-heading h1 {
+        font-size: 1.8rem;
+    }
+    .upload-nft-box-heading p {
+        font-size: 1rem;
+    }
+    .upload-nft-box-title h2 {
+        font-size: 1.4rem;
+    }
+    .upload-nft-box-title p {
+        font-size: 0.9rem;
+    }
+}

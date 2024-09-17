@@ -1,0 +1,72 @@
+.subscription-container {
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .subscription-container h1 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+  }
+  
+  .plans-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .plan-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .plan-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .plan-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .plan-details {
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .plan-details h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .plan-details h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .plan-details p {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 20px;
+  }
+  
+  .sign-up-button {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .sign-up-button:hover {
+    background-color: #333;
+  }
+  
