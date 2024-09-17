@@ -1,8 +1,15 @@
+// src/components/Login/Login.js
+
+import 'react-toastify/dist/ReactToastify.css';
+
+import { MdEmail } from "react-icons/md";
+
+
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
-import { Link } from "react-router-dom";
+
 import "./ForgotPassword.css";
 
 const ForgotPassword = () => {
@@ -22,25 +29,31 @@ const ForgotPassword = () => {
   };
 
   return (
-    <div className="forgotPassword">
-      <div className="navbar"></div>
-      <div className="fpContainer">
-        <h1>Quên Mật Khẩu</h1>
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          className="fpInput"
-        />
-        <button onClick={handleSendVerificationCode} className="fpButton">
+
+        <div className="background-container">
+       <img src='/img/background.jpg' alt="" />
+    <div className="wrapper">
+      <div className="form-box">
+        <form>
+          <h1>Quên mật khẩu</h1>
+          <div className="input-box">
+            <input type="text" placeholder="Email"  value={email}
+          onChange={(e) => setEmail(e.target.value)} />
+            <MdEmail className="icon" />
+          </div>
+        
+                 <button onClick={handleSendVerificationCode} className="submit">
           Gửi mã xác minh
         </button>
-        <div>
-          <Link to="/">Trở lại trang chủ</Link>
-        </div>
-        <ToastContainer />
+          <div className="register-link">
+            <p>
+              <a href="#" >Trở về trang chủ</a>
+            </p>
+          </div>
+           <ToastContainer />
+        </form>
       </div>
+    </div>
     </div>
   );
 };

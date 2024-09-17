@@ -1,122 +1,132 @@
-.register-hongpiknuahihi {
-  margin: 0;
-  font-family: "Roboto", sans-serif;
-  background: linear-gradient(135deg, #00c6ff, #0072ff);
-  height: 100vh;
-  display: flex;
-  justify-content: right;
-  background: url('https://www.vietfuntravel.com.vn/image/data/dia-diem-vung-tau/5-sao-vung-tau/Imperial-vung-tau-1.jpg') no-repeat center center/cover;
-  align-items: center;
-  
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+.background-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    background-size: cover;
+   
+}
+.background-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Ensures the image is in the background */
 }
 
-.register-container {
-  background: #fff;
-  padding: 40px 50px;
-  border-radius: 12px;
-  margin-right: 100px;
-  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
-  width: 400px;
-  max-width: 100%;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-  transition: transform 0.3s ease;
-}
-.register_haa{
-  justify-content: center;
-  align-items: center;
-  
-}
-/* Heading styling */
-.register-form h2 {
-  font-size: 30px;
-  color: #333;
-  font-weight: 700;
-  margin-bottom: 25px;
-  letter-spacing: 1px;
+.wrapper {
+    position: relative;
+    width: 420px;
+    max-height: 80vh; /* Allow the wrapper to be taller than its content but not exceed the viewport height */
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .1);
+    backdrop-filter: blur(30px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    
 }
 
-/* Input fields styling */
-.register-form input {
-  width: 100%;
-  text-align: center; 
-  padding-left: 0px ;
-  padding-top: 20px;
-  padding-right: -20px;
-  padding-bottom: 20px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 16px;
-  background-color: #f8f8f8;
-  transition: all 0.3s ease-in-out;
-  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.05);
+.form-box {
+    width: 100%;
+    max-height: 100%; /* Allow the form box to expand to fill the wrapper */
+    padding: 40px;
+    overflow-y: auto; /* Allow vertical scrolling */
 }
 
-.register-form input:focus {
-  border-color: #00aaff;
-  background-color: #fff;
-  outline: none;
-  box-shadow: 0 0 10px rgba(0, 170, 255, 0.15);
+form h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-/* Button styling */
-.register-form button {
-  width: 100%;
-  padding: 16px;
-  font-size: 18px;
-  color: #fff;
-  background: linear-gradient(135deg, #ff7e5f, #feb47b);
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  letter-spacing: 0.5px;
-  transition:  0.3s ease, transform 0.3s ease;
+form .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 20px 0;
 }
 
-/* Button hover effect */
-.register-form button:hover {
-  background: linear-gradient(135deg, #feb47b, #ff7e5f);
-  transform: translateY(-2px);
-}
-
-/* Small text link */
-.register-form a {
-  font-size: 14px;
-  color: #007bff;
-  text-decoration: none;
-}
-
-.register-form a:hover {
-  text-decoration: underline;
-}
-
-
-.Toastify__toast--success {
-  background-color: #28a745;
-}
-
-.Toastify__toast--error {
-  background-color: #dc3545;
-}
-
-.register-container:hover {
-  transform: scale(1.02);
-}
-
-@media (max-width: 768px) {
-  .register-container {
-    padding: 30px;
-    width: 90%;
-  }
-
-  .register-form h2 {
-    font-size: 26px;
-  }
-
-  .register-form button {
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .1);
+    border-radius: 40px;
     font-size: 16px;
-  }
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+    color: #fff;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 20px; /* Đặt icon cách bên phải 20px */
+    top: 50%; /* Đặt icon ở giữa theo chiều dọc của input */
+    transform: translateY(-50%); /* Di chuyển icon lên 50% để căn giữa theo chiều dọc */
+    font-size: 16px;
+}
+form .remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: 20px 0;
+}
+
+.remember-forgot label input {
+    accent-color: #fff;
+    margin-right: 4px;
+}
+
+.remember-forgot a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    color: black;
+}
+
+form button {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 700;
+}
+
+form .register-link {
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.register-link p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link p a:hover {
+    color: black;
 }
