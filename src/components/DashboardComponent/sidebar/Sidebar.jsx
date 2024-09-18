@@ -10,8 +10,14 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import HowToVoteIcon from "@mui/icons-material/HowToVote";
 import LockIcon from "@mui/icons-material/Lock";
 import { Link } from "react-router-dom";
-
+import React, { useState } from "react";
+import ShareNFTModal from "../ShareNFTModal/ShareNFTModal";
 const Sidebar = () => {
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
   return (
     <div className="sidebar">
       <div className="top">
@@ -51,10 +57,12 @@ const Sidebar = () => {
             <SwapHorizIcon className="icon" />
             <span>Swap</span>
           </li>
-          <li>
+          <li onClick={openModal}>
             <HourglassEmptyIcon className="icon" />
-            <span>Liquidity</span>
+            <span>Share NFT</span>
           </li>
+          <ShareNFTModal isOpen={isModalOpen} onClose={closeModal} />
+
           <p className="title">USER</p>
           <li>
             <AccountCircleIcon className="icon" />

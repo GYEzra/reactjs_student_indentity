@@ -1,0 +1,136 @@
+.nft-gallery {
+    padding: 2rem;
+    background-color: #f0f3f8;
+  
+    .nft-gallery-header {
+      text-align: center;
+      margin-bottom: 2rem;
+  
+      .nft-gallery-title {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #333;
+      }
+  
+      .nft-gallery-subtitle {
+        font-size: 1.2rem;
+        color: #666;
+      }
+  
+      .nft-gallery-nav {
+        margin-top: 1.5rem;
+  
+        .nft-gallery-categories {
+          display: flex;
+          justify-content: center;
+          list-style: none;
+          gap: 2rem;
+  
+          .nft-gallery-category {
+            font-size: 1.1rem;
+            color: #555;
+            cursor: pointer;
+  
+            &:hover {
+              color: #000;
+            }
+          }
+        }
+      }
+    }
+  
+    .nft-gallery-filters {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.5rem;
+      
+        .nft-gallery-media-types {
+          display: flex;
+          gap: 1rem;
+          justify-content: center; /* Center the media types horizontally */
+          flex: 1; /* Allow it to grow and fill available space */
+        }
+      
+        .nft-gallery-media-type, 
+        .nft-gallery-media-type-verified {
+          padding: 0.5rem 1rem;
+          border-radius: 20px;
+          background-color: #e0e7ef;
+          cursor: pointer;
+        }
+      
+        .nft-gallery-media-type-verified {
+          background-color: #6272f1;
+          color: #fff;
+        }
+      
+        .nft-gallery-filter-button {
+          padding: 0.5rem 1rem;
+          border-radius: 20px;
+          background-color: #6272f1;
+          color: #fff;
+          cursor: pointer;
+        }
+      }
+      
+  
+    .nft-gallery-items {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap; 
+      justify-content: center;
+  
+      .nft-gallery-item {
+        flex: 1 1 calc(33.333% - 2rem);
+        max-width: calc(33.333% - 2rem);
+        background-color: #fff;
+        border-radius: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        margin-bottom: 2rem;
+  
+        .nft-gallery-item-image {
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+  
+        .nft-gallery-item-info {
+          padding: 1rem;
+  
+          .nft-gallery-item-likes {
+            font-size: 1rem;
+            color: #999;
+          }
+  
+          .nft-gallery-item-timer {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #6272f1;
+            margin-bottom: 1rem;
+          }
+  
+          .nft-gallery-item-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+          }
+  
+          .nft-gallery-item-price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 0.5rem;
+          }
+  
+          .nft-gallery-item-stock {
+            font-size: 0.9rem;
+            color: #777;
+          }
+        }
+      }
+    }
+  }
+  
