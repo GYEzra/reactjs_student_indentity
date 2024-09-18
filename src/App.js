@@ -14,6 +14,7 @@ import SubscriptionPage from "./pages/SubscriptionPage/SubscriptionPage.jsx";
 import Account from "./pages/account/account.jsx";
 import CreatePage from "./pages/CreatePage/CreatePage.jsx";
 import SmartContractForm from "./pages/SmartContractForm/SmartContractForm.jsx";
+import Dashboard from "./pages/Dashboard/Dashboard.jsx";
 function App() {
   return (
     <BrowserRouter>
@@ -29,6 +30,10 @@ function App() {
         <Route path="/Account" element={<Account/>} />
         <Route path="/CreatePage" element={<CreatePage/>} />
         <Route path="/SmartContractForm" element={<SmartContractForm/>} />
+        
+        <Route path="/Dashboard">
+          <Route index element={<Dashboard/>} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );
