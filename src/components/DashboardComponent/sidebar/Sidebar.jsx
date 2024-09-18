@@ -29,8 +29,10 @@ const Sidebar = () => {
           </li>
           <p className="title">LISTS</p>
           <li>
+          <Link to="/BinanceChart" style={{ textDecoration: "none" }}>
             <ShowChartIcon className="icon" />
             <span>Live Pricing</span>
+          </Link>
           </li>
           <li>
             <SmartToyIcon className="icon" />
