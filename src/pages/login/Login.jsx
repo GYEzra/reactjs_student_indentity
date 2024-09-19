@@ -22,7 +22,7 @@ const Login = () => {
       <div className="wrapper">
         <div className="form-box">
           <form>
-            <h1>Login kakakakak</h1>
+            <h1>Login</h1>
             <div className="input-box">
              
               <input type="text" placeholder="Người dùng" id='username' required />
