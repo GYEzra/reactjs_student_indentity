@@ -6,9 +6,42 @@ import { BsFingerprint } from "react-icons/bs";
 
 const WalletModal = ({ onClose }) => {
     return (
-        <div className="modal-overlay" onClick={onClose}>
+        <div className="modal-overlay" onClick={onClose}> 
+     
+       
+         
             <div className="wallet-login1" onClick={(e) => e.stopPropagation()}>
-                <button className="close-btn" onClick={onClose}>✕</button>
+    
+  
+                <button className="close-btn" onClick={onClose}>✕</button> 
+          
+                
+                <div className="login-options">
+                    <div className="social-icons1">
+                        <div className="gg-icon">
+                            <img src='https://cdn-icons-png.flaticon.com/512/2875/2875331.png' alt="GG" className="icon" />
+                        </div>
+                        <div className="apple-icon">
+                            <FaApple className="icon" />
+                        </div>
+                        <div className="fb-icon">
+                            <img src='https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png' alt="FB" className="icon" />
+                        </div>
+                        </div>
+                            <span className="divider">or</span>
+                        <input
+                            type="email"
+                            placeholder="Email address"
+                            className="login-input"
+                        />
+                        
+                        <button className="login-btn1">
+                            <MdPhone className="icon1" /> Phone number
+                        </button>
+                        <button className="login-btn1">
+                            <BsFingerprint className="icon1" /> Passkey
+                        </button>
+                    </div>
                     <div className="wallet-options1">
                         <div className="wallet-option1">
                         <img src='https://cdn-icons-png.flaticon.com/256/5969/5969358.png' alt="Social Login" className="icon1" />
@@ -39,34 +72,9 @@ const WalletModal = ({ onClose }) => {
                         <span>All Wallets</span>
                     </div>
                 </div>
-                <div className="login-options">
-                    <div className="social-icons1">
-                        <div className="gg-icon">
-                            <img src='https://cdn-icons-png.flaticon.com/512/2875/2875331.png' alt="GG" className="icon" />
-                        </div>
-                        <div className="apple-icon">
-                            <FaApple className="icon" />
-                        </div>
-                        <div className="fb-icon">
-                            <img src='https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png' alt="FB" className="icon" />
-                        </div>
-                        </div>
-                            <span className="divider">or</span>
-                        <input
-                            type="email"
-                            placeholder="Email address"
-                            className="login-input"
-                        />
-                        
-                        <button className="login-btn1">
-                            <MdPhone className="icon1" /> Phone number
-                        </button>
-                        <button className="login-btn1">
-                            <BsFingerprint className="icon1" /> Passkey
-                        </button>
-                    </div>
                 </div>
-        </div>
+             </div>    
+        
     );
 };
 

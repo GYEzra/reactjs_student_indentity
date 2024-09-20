@@ -1,16 +1,37 @@
-// src/components/Login/Login.js
 
+import React, { useState } from 'react';
 import 'react-toastify/dist/ReactToastify.css';
-import React from 'react';
-import { FaUserAlt, FaLock } from 'react-icons/fa';
+import { ToastContainer, toast } from 'react-toastify';
+import   
+ { FaUserAlt, FaLock } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
-import "./login.css";
-
-
-
+import './login.css';
 
 const Login = () => {
   const navigate = useNavigate();
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState(null);   
+
+
+  // Simulated login data (replace with actual API call)
+  const fakeLoginData = {
+    username: 'camtu',
+    password: '123',
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (username !== fakeLoginData.username || password !== fakeLoginData.password) {
+ 
+      toast.error('Invalid username or password. Please try again.');
+      return;
+    }
+
+    setError(null);
+    toast.success('Login successful!');
+    navigate('/Dashboard'); 
+  };
 
   const registerLink = () => {
     navigate('/register');
@@ -18,18 +39,31 @@ const Login = () => {
 
   return (
     <div className="background-container">
-       <img src='/img/background.jpg' alt="" />
+      <img src='/img/background.jpg' alt="" />
       <div className="wrapper">
         <div className="form-box">
-          <form>
-            <h1>Login kakakakak</h1>
+          <form onSubmit={handleSubmit}>
+            <h1>Login</h1>
             <div className="input-box">
-             
-              <input type="text" placeholder="Người dùng" id='username' required />
+              <input
+                type="text"
+                placeholder="Người dùng"
+                id='username'
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                required
+              />
               <FaUserAlt className="icon" />
             </div>
             <div className="input-box">
-              <input type="password" placeholder="Mật khẩu" id='password' required />
+              <input
+                type="password"
+                placeholder="Mật khẩu"
+                id='password'
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              />
               <FaLock className="icon" />
             </div>
             <div className="remember-forgot">
@@ -45,8 +79,10 @@ const Login = () => {
               </p>
             </div>
           </form>
+          {error && <p className="error-message">{error}</p>}
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };

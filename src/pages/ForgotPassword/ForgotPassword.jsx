@@ -36,6 +36,7 @@ const ForgotPassword = () => {
       <div className="form-box">
         <form>
           <h1>Quên mật khẩu</h1>
+          <p>example@example.com</p>
           <div className="input-box">
             <input type="text" placeholder="Email"  value={email}
           onChange={(e) => setEmail(e.target.value)} />
