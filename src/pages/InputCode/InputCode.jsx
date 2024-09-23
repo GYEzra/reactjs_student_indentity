@@ -1,8 +1,20 @@
+// src/components/Login/Login.js
+
+import 'react-toastify/dist/ReactToastify.css';
+
+
+
+
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
-import { Link } from "react-router-dom";
+import { IoMdBarcode } from "react-icons/io";
+
+
+
+import 'react-toastify/dist/ReactToastify.css';
+
 import "./InputCode.css";
 
 const InputCode = () => {
@@ -22,25 +34,31 @@ const InputCode = () => {
   };
 
   return (
-    <div className="InputCode">
-      <div className="navbar"></div>
-      <div className="fpContainer">
-        <h1>Nhập mã code</h1>
-        <input
-          type="email"
-          placeholder="Email"
-          value={Code}
-          onChange={(e) => setCode(e.target.value)}
-          className="fpInput"
-        />
-        <button onClick={handleSendVerificationCode} className="fpButton">
+
+       <div className="background-container">
+       <img src='/img/background.jpg' alt="" />
+    <div className="wrapper">
+      <div className="form-box">
+        <form>
+          <h1>Nhập mã code</h1>
+          <div className="input-box">
+            <input type="text" placeholder="Mã code"  value={Code}
+          onChange={(e) => setCode(e.target.value)} />
+            <IoMdBarcode className="icon" />
+          </div>
+        
+                 <button onClick={handleSendVerificationCode} className="submit">
           Gửi mã xác minh
         </button>
-        <div>
-          <Link to="/">Trở lại trang chủ</Link>
-        </div>
-        <ToastContainer />
+          <div className="register-link">
+            <p>
+              <a href="#">Trở về trang chủ</a>
+            </p>
+          </div>
+           <ToastContainer />
+        </form>
       </div>
+    </div>
     </div>
   );
 };
