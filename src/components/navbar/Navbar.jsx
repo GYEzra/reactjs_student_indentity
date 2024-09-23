@@ -1,86 +1,137 @@
-import "./navbar.css";
-import { Link } from "react-router-dom";
-import { useState } from "react";
-//import { AuthContext } from "../../../context/AuthContext";      
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-
-const fakeUser = {
-  username: "Nguyễn Văn A",
-  img: "https://static.tuoitre.vn/tto/i/s626/2017/03/21/2-1-1490080249.jpg" 
-};
+import React, { useState, useEffect } from 'react';
+import { FaBars, FaTimes } from 'react-icons/fa';
+import './navbar.css'; // File CSS cho styling
+import { IoMdSearch } from "react-icons/io";
+import { FaRegUserCircle } from "react-icons/fa";
+import { MdWallet } from "react-icons/md";
+import { RiAccountCircleFill } from "react-icons/ri";
 
 const Navbar = () => {
+  const [click, setClick] = useState(false);
+  const [showFullMenu, setShowFullMenu] = useState(false);
+  const [navbarScrolled, setNavbarScrolled] = useState(false);
 
-  const [user, setUser] = useState(fakeUser);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const handleUserClick = () => setShowFullMenu(!showFullMenu);
 
-  const handleLogout = () => {
-    setUser(null); 
+  // Function to handle scroll event and change navbar background
+  const handleScroll = () => {
+    const headerHeight = document.querySelector('.header').offsetHeight;
+    if (window.scrollY > headerHeight) {
+      setNavbarScrolled(true);
+    } else {
+      setNavbarScrolled(false);
+    }
   };
 
- 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
-    <div className="navbar">
-      <div className="navbarproject">
-        <div className="navContainerproject">
-          <Link to="/" style={{ color: "inherit", textDecoration: "none" }}>
-            <span className="logo">FINTECH</span>
-          </Link>
-
-          {user ? (
-            <div className="navItems">
-              <div className="userInfo">
-                {user.img && <img src={user.img} alt="User" className="userImg" />}
-                <span className="username">{user.username}</span>
-              </div>
-              <button className="navButton" onClick={handleLogout}>
-                Đăng xuất
-              </button>
-            </div>
-          ) : null}
-        </div>
-        {user ? null : (
-          <div className="navItems">
-            <Link to="/register" style={{ textDecoration: "none" }}>
-              <button className="navButton">Đăng ký</button>
-            </Link>
-            <Link to="/login" style={{ textDecoration: "none" }}>
-              <button className="navButton">Đăng nhập</button>
-            </Link>
+    <div className="container_nav_header">
+      <nav className={`navbar ${navbarScrolled ? 'scrolled' : ''}`}>
+        <div className="nav-container">
+          <div className="logo_nav">
+            <a href="/Dashboard">
+              <img src="./img/collection.png" alt="" />
+              <p>FINTECH</p>
+            </a>
           </div>
-        )}
-      </div>
-      <div className="navbarBottom">
-        <ul className="headernavbar">
-          <li onClick={toggleMenu} style={{ cursor: "pointer" }}>
-            <FontAwesomeIcon icon={faBars} />
-          </li>
-            <li><Link to="/CreatePage" className="navbarLink">Collection</Link></li>
-            <li><Link to="/Dashboard" className="navbarLink">Dashboard</Link></li>
-            <li><Link to="/Account" className="navbarLink">AccountSetting</Link></li>
-            <li><Link to="/" className="navbarLink">Create Collection</Link></li>
-            <li><Link to="/UploadNFTPage" className="navbarLink">Upload NFT</Link></li>
-        </ul>
-        {isMenuOpen && (
-          <div className="dropdownMenu">
-            <h4>Menu</h4>
-            <ul>
-              <li><Link to="/" className="navbar11">About</Link></li>
-              <li><Link to="/" className="navbar11">Contact Us</Link></li>
-              <li><Link to="/" className="navbar11">Sign in</Link></li>
-              <li><Link to="/" className="navbar11">Subsription</Link></li>
+
+          <div className="menu_nav">
+            <ul className="nav-menu">
+              <li className="nav-item">
+                <a href="/CreatePage" className="nav-links">Collection</a>
+              </li>
+              <li className="nav-item">
+                <a href="/about" className="nav-links">Create Collection</a>
+              </li>
+              <li className="nav-item">
+                <a href="/UploadNFTPage" className="nav-links">Upload NFT</a>
+              </li>
             </ul>
           </div>
+
+          <div className="search_nav">
+            <IoMdSearch size={26} className='icon_search' />
+            <input type="text" placeholder='Search' className='input_search' />
+          </div>
+
+          <div className="wallet_nav">
+            <div className="wallet1">
+              <MdWallet className='icon' />
+              <p>Login</p>
+            </div>
+            <div className="user_nav" onClick={handleUserClick}>
+              <FaRegUserCircle className='icon' />
+            </div>
+          </div>
+        </div>
+
+        {showFullMenu && (
+          <div className="full-menu">
+             <ul>
+            <li className="nav-item">
+              <RiAccountCircleFill size={26} className='nav-item_icon'/>
+              <a href="/Account" className="nav-links">Account</a>
+            </li>
+            <li className="nav-item">
+               <RiAccountCircleFill size={26} className='nav-item_icon'/>
+              <a href="/Dashboard" className="nav-links">About</a>
+            </li>
+            <li className="nav-item">
+               <RiAccountCircleFill size={26} className='nav-item_icon'/>
+              <a href="/UploadNFTPage" className="nav-links">Contact Us</a>
+            </li>
+            <li className="nav-item">
+               <RiAccountCircleFill size={26} className='nav-item_icon'/>
+              <a href="/UploadNFTPage" className="nav-links">Sign in</a>
+            </li>
+            <li className="nav-item">
+               <RiAccountCircleFill size={26} className='nav-item_icon'/>
+              <a href="/UploadNFTPage" className="nav-links">Subscription</a>
+            </li>
+              <li className="nav-item">
+                 <RiAccountCircleFill size={26} className='nav-item_icon'/>
+              <a href="/Account" className="nav-links">Account</a>
+            </li>
+            <li className="nav-item">
+               <RiAccountCircleFill size={26} className='nav-item_icon'/>
+              <a href="/Dashboard" className="nav-links">About</a>
+            </li>
+            <li className="nav-item">
+               <RiAccountCircleFill size={26} className='nav-item_icon'/>
+              <a href="/UploadNFTPage" className="nav-links">Contact Us</a>
+            </li>
+            <li className="nav-item">
+               <RiAccountCircleFill size={26} className='nav-item_icon'/>
+              <a href="/UploadNFTPage" className="nav-links">Sign in</a>
+            </li>
+            <li className="nav-item">
+               <RiAccountCircleFill size={26} className='nav-item_icon'/>
+              <a href="/UploadNFTPage" className="nav-links">Subscription</a>
+            </li>
+          </ul>
+          </div>
         )}
+
+        <div className="nav-icon" onClick={handleUserClick}>
+          {click ? <FaTimes /> : <FaBars />}
+        </div>
+      </nav>
+
+      <div className="header">
+        <div className="header-overlay">
+          <h1>BLOCKCHAIN</h1>
+          <p>This is a simple header with background image and overlay text</p>
+        </div>
       </div>
     </div>
   );
-};
+}
 
 export default Navbar;

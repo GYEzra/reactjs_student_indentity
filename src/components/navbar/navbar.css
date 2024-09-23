@@ -1,159 +1,413 @@
-.navbarproject {
-  height: 60px;
-  background-color: #fff;
+
+.container_nav_header{
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background-image: url('../../../public/img/background.jpg'); /* Thay đổi URL thành hình ảnh nền của bạn */
+  background-size: cover;
+  background-position: center;
+}
+
+
+.header {
+  position: relative;
+  width: 100%;
+  height: 500px;
+
+}
+
+.header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Màu nền đen với độ mờ */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.header-overlay h1 {
+  font-size: 5rem;
+  font-weight: bold;
+  width: 80%;
+  margin: 0;
+}
+
+.header-overlay p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+    width: 80%;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 20px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-.navbar{
-   justify-content: center;
-  align-items: center;
-  background-color: #fff;
+  font-size: 1.2rem;
+  background: transparent;
+  backdrop-filter: blur(100px);
+  box-shadow: 5px 5px 5px black;
+  z-index: 100;
+  transition: background-color 0.3s ease-in-out; /* Smooth transition for background color */
 }
 
-.navContainerproject {
-  width: 100%;
-  max-width: 1200px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logo {
-  font-weight: bold;
-  margin-left: 100px;
-  font-size: 24px;
-  color: #0871a6;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  transition: color 0.3s ease;
-}
-
-.logo:hover {
-  color: #0c4663;
-}
-
-.navButton {
-  border: none;
-  padding: 8px 16px;
-  cursor: pointer;
-  color: white;
-  border-radius: 20px;
-  background-color: #0871a6;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  margin-left: 15px;
-  white-space: nowrap;
-  font-size: 14px;
-  font-weight: 500;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.navButton:hover {
+/* Change navbar background when scrolled */
+.navbar.scrolled {
   background-color: white;
-  color: #0c4663;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
 }
 
-.userInfo {
+/* Update text color when navbar background is white */
+.navbar.scrolled .nav-links {
+  color: black;
+}
+
+.nav-container {
   display: flex;
-  align-items: center;
+  height: 100%;
+  width: 95%;
+  padding: 0 20px;
+  gap: 2rem;
 }
 
-.userImg {
+.logo_nav {
+  width: 18%;
+}
+
+.logo_nav a {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  gap: 1rem;
+}
+
+.logo_nav img {
   width: 40px;
   height: 40px;
-  border-radius: 50%;
-  margin-right: 10px;
-  border: 2px solid #0871a6;
-  object-fit: cover;
-  transition: transform 0.3s ease;
+  border-radius: 50px;
 }
 
-.userImg:hover {
-  transform: scale(1.1);
+.logo_nav img:hover {
+  padding: 2px;
+}
+.logo_nav p {
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 26px;
+  color: white;
 }
 
-.username {
-  margin-right: 10px;
-  font-weight: 500;
-  color: #333;
-  font-size: 16px;
+.logo_nav p:hover{
+  color: #d3d3d3;
+}
+.navbar.scrolled .logo_nav p {
+  color: black;
 }
 
-.navbarBottom {
-  padding: 10px 0;
-  background-color: #fff;
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+.menu_nav {
+  width: 38%;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+}
+
+.nav-item {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  text-align: center;
   
 }
 
-.headernavbar {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  padding: 0;
-  margin: 0;
-  list-style: none;
+.nav-item_icon{
+height: 100%;
+
+margin-left: 20px;
 }
 
-.navbarLink {
-  color: #0871a6;
-  font-size: 14px;
+.nav-links {
+  color: #ffffff;
   text-decoration: none;
-  padding: 8px 16px;
-  border-radius: 10px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-.navItems{
-  display:flex
-}
-.navbarLink:hover {
-  background-color: #0c46633c;
-  color: #0c4663;
-  transform: translateY(-2px);
-}
-.dropdownMenu {
-  position: absolute;
-  top: 110px; 
-  left: 0px;
-  background-color: white;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 10px 20px;
-  z-index: 999;
-  width: 250px;
-  margin-left: 380px;
-}
-
-.dropdownMenu h4 {
-  margin: 0;
-  padding: 10px 0;
+  padding: 0.5rem 1rem;
+  height: 100%;
+  display: flex;
+  font-weight: 600;
   font-size: 16px;
-  color: #0871a6;
-  border-bottom: 1px solid #eee;
+  align-items: center;
 }
 
-.dropdownMenu ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+.nav-links:hover {
+  color: #a0a0a0;
+  transition: all 0.3s ease;
 }
 
-.dropdownMenu ul li {
-  padding: 10px 0;
-  font-size: 14px;
-  color: #333;
+
+.header {
+  margin-top: 80px; /* Push the content down to avoid overlap with the navbar */
+}
+
+.search_nav{
+  width: 20%;
+  border-radius: 10px;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: auto 0;
+  background: transparent;
+  padding: 5px;
+  box-shadow: 1px 1px 1px 1px rgb(255, 255, 255);
+
+}
+
+.search_nav:hover{
+    border: none;
+     box-shadow: 2px 2px 2px 2px rgb(255, 255, 255);
+}
+
+.icon_search{
+  margin: 0 auto;
+  color: #eeeeee;
+}
+
+/* Thay đổi màu chữ và icon khi navbar scrolled */
+.navbar.scrolled .nav-links,
+.navbar.scrolled .logo_nav p,
+.navbar.scrolled .icon,
+.navbar.scrolled .icon_search,
+.navbar.scrolled .input_search::placeholder ,
+.navbar.scrolled .wallet1 p{
+  color: black;
+}
+
+.navbar.scrolled .nav-links:hover,
+.navbar.scrolled .logo_nav p:hover{
+  color: #494848;
+}
+
+.navbar.scrolled .logo_nav img:hover{
+  padding: 2px;
+}
+
+
+.navbar.scrolled .wallet1,
+.navbar.scrolled .user_nav,
+.navbar.scrolled .search_nav{
+  box-shadow: 2px 2px 2px 2px rgb(84, 84, 84);
+}
+
+.navbar.scrolled .nav-icon{
+  color: #000000;
+}
+
+.navbar.scrolled .wallet1:hover,
+.navbar.scrolled .user_nav:hover,
+.navbar.scrolled .search_nav:hover{
+  box-shadow: 2px 2px 3px 2px black;
+  background-color: white;
+}
+
+.search_nav input.input_search{
+  height: 70%;
+  width: 85%;
+  background: transparent;
+  padding: 15px;
+  border: none;
+}
+input.input_search::placeholder{
+  color: #f6f6f6;
+  font-weight: 600;
+  font-size: 14px
+}
+
+
+.wallet_nav{
+  display: flex;
+  height: 100%;
+  width: 12%;
+  align-items: center;
+  text-align: center;
+  gap: .8rem;
+}
+
+.wallet1{
+  background: transparent;
+  display: flex;
+  gap: .7rem;
+  height: 50%;
+  border-radius: 10px;
+  padding: 20px 15px;
+  text-align: center;
+  align-items: center;
+  box-shadow: 1px 1px 1px 1px rgb(255, 255, 255);
+}
+
+
+
+.wallet1:hover,
+.user_nav:hover{
+  box-shadow: 2px 2px 2px 2px rgb(255, 255, 255);
+}
+
+
+.wallet1 p{
+  font-weight: 600;
+  color: white;
+  font-size: 16px;
+}
+.icon{
+  color: white;
+}
+
+.user_nav{
+
+  border-radius: 10px;
+  padding: 10px;
+  height: 50%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  box-shadow: 1px 1px 1px 1px rgb(255, 255, 255);
   cursor: pointer;
-  transition: color 0.2s ease;
 }
 
-.dropdownMenu ul li:hover {
-  color: #0c4663;
+.nav-icon {
+  display: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  margin: auto 0;
+  margin-right: 20px;
+ 
 }
 
+/* Full menu styles */
+.full-menu {
+  display: flex;
+  position: fixed; /* Để giữ menu ở vị trí cố định */
+  flex-direction: column;
+  width: 20%;
+  height: 80vh; /* Đảm bảo chiều cao đầy đủ */
+  background-color: #ffffff;
+  top: 80px; /* Đặt vị trí bên dưới navbar */
+  right: 0; /* Di chuyển sang bên phải */
+  z-index: 10;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); /* Tùy chọn: thêm bóng đổ */
+  overflow-y: auto; /* Cho phép cuộn dọc khi cần */
+}
 
+/* Các kiểu khác */
+.full-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.full-menu .nav-item {
+  width: 100%;
+  height: 50px;
+}
+
+.full-menu .nav-item_none {
+  width: 100%;
+  height: 50px;
+}
+
+.full-menu .nav-links {
+  color: #000000;
+  text-decoration: none;
+  padding: 1rem;
+  display: block;
+  text-align: center;
+}
+
+.full-menu .nav-links:hover {
+  background: #aaaaaa;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+
+
+.container_nav_header{
+height: 400px;
+}
+
+ .header-overlay h1 {
+  font-size: 60px;
+ }
+  .header-overlay p {
+  font-size: 16px;
+ }
+  .navbar {
+    position: fixed;
+    width: 100%;
+  }
+    .nav-container{
+    gap: .5rem;
+  
+  }
+
+
+  .nav-menu {
+    display: none
+  }
+
+  .full-menu {
+    display: flex;
+    background: #ffffff; /* Thay đổi URL thành hình ảnh nền của bạn */
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    top: 80px;
+    opacity: 1;
+    transition: all 0.5s ease;
+    overflow-y: scroll;
+  }
+
+  .nav-links:hover {
+  background: #aaaaaa;
+}
+
+ .search_nav{
+    background: transparent;
+  }
+ 
+  .input_search{
+    display: none;
+  }
+  .user_nav{
+    display: none;
+  }
+
+  .nav-menu.active {
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+  .nav-icon {
+    display: block;
+  }
+}
