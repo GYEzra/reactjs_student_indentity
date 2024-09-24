@@ -1,12 +1,37 @@
+.wallet{
+   width: 70%;
+    background-color: #0d0d0d;
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+.wallet h4 {
+    color: white;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+
+}
+.wallet h4:hover {
+    color: rgb(64, 64, 64);
+ 
+}
 .wallet-login {
     display: flex;
     justify-content: space-between;
-    padding: 2rem;
+    padding: 1rem;
     background-color: #0d0d0d;
     border-radius: 1rem;
     color: white;
     max-width: 800px;
     margin: 0 auto;
+}
+
+
+.wallet-login h4:hover {
+    color: #3a3a3a;
 }
 
 .wallet-options {
@@ -18,8 +43,10 @@
 
 .wallet-option {
     display: flex;
+    width: auto;
     align-items: center;
     gap: 1rem;
+    flex-wrap: wrap;
     padding: 0.8rem 1rem;
     background-color: #1a1a1a;
     border-radius: 0.5rem;
@@ -40,7 +67,7 @@
     flex-direction: column;
     gap: 1rem;
     width: 55%;
-    padding-top:80px
+    padding-top:50px
 }
 
 .social-icons {
@@ -52,13 +79,12 @@
 .social-icons .icon {
     font-size: 3rem;
 
-    
 }
 
 .social-icons .icon:hover {
-    padding: 9px 20px;
-    background-color: #555;
-    border-radius: 6px;
+    padding: 5px;
+    background-color: #000000;
+    border-radius: 50px;
 }
 
 .divider {
@@ -77,6 +103,13 @@
     color: white;
 }
 
+
+.btn{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
 .login-btn {
     display: flex;
     align-items: center;
@@ -104,7 +137,39 @@
     height: 3rem; 
     object-fit: contain;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
+   .wallet{
+   width: 90%;
+    background-color: #0d0d0d;
+    margin: 0 auto;
+    border-radius: 1rem;
+   }
+.btn{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+   .btn{
+    display: flex;
+    flex-direction: column;
+   }
+
+
+.wallet h4 {
+    color: white;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+   .wallet-options{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+    }
     .wallet-login {
         flex-direction: column;
         align-items: center;
@@ -113,5 +178,40 @@
     .wallet-options,
     .login-options {
         width: 100%;
+        display: flex;
+        flex-wrap: wrap;
     }
+}
+
+@media screen and (max-width: 550px) {
+    .wallet{
+   width: 90%;
+    background-color: #0d0d0d;
+    margin: 0 auto;
+    border-radius: 1rem;
+}
+
+.wallet h4 {
+    color: white;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+   
+ .wallet-options{
+        display: flex;
+   
+        flex-direction: column;
+    }
+    .wallet-option{
+        width: 100%;
+    }
+ 
+    .btn{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
 }

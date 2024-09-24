@@ -182,3 +182,7 @@ form .register-link {
 .register-link p a:hover {
     color: black;
 }
+
+.error-message{
+    color: rgb(248, 88, 88);
+}
