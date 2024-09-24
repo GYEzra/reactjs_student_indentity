@@ -4,7 +4,7 @@ import './BinanceChart.scss';
 import Navbar from "../../components/DashboardComponent/navbar/Navbar";
 import Sidebar from "../../components/DashboardComponent/sidebar/Sidebar";
 const candlestickData = [
-    ['2024/07/25', 570, 600, 560, 580],
+  ['2024/07/25', 570, 600, 560, 580],
   ['2024/07/26', 580, 620, 570, 600],
   ['2024/07/27', 600, 610, 580, 590],
   ['2024/07/28', 590, 615, 580, 605],
@@ -79,7 +79,7 @@ const candlestickData = [
 ];
 
 const volumeData = [
-    ['2024/07/25', 120000],
+  ['2024/07/25', 120000],
   ['2024/07/26', 130000],
   ['2024/07/27', 125000],
   ['2024/07/28', 150000],
