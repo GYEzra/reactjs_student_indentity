@@ -1,85 +1,119 @@
-.create-page {
-    display: flex;
-    height: 100vh;
-    overflow: hidden;
+
+.CreatePage{
+    width: 100%;
+    height: 100%;
+    background: black;
 }
 
-.left-section {
-    flex: 1;
-    padding: 60px 40px; 
+.create-page{
+ 
+    display: flex;
+    gap: 1rem;
+    height: 100%;
+}
+
+.left-sectionn{
+    width: 40%;
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    background-color: #fff;
-    border-right: 1px solid #e0e0e0;
+    gap: 1rem;
+    margin: auto 0;
+    margin-left: 15px;
+}
+.logo_created {
+    display: flex;
+   
+    gap: .5rem;
+}
+.logo_created img{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50px;
+    
+}
+.logo_created h1 {
+    height: 100%;
+    color: white;
+    font-size: 2rem;
 }
 
-.options1 {
+.options1{
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    width: 100%; 
-}
 
-.option1, .option {
-    background-color: #f8f8f8;
+}
+.option_created {
+    background: rgb(34, 34, 34);
+    margin-bottom: 1rem;
+    border-radius: 10px;
     padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    position: relative;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 2px 2px 2px rgb(26, 26, 26);
+}
+.left_option{
+    width: 80%;
+}
+.option_created a {
+    margin: auto 0;
 }
 
-.option1:hover, .option:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+.lable_created {
+    display: flex;
+    gap: .5rem;
+    margin-bottom: 10px;
+  
+}
+.icon_created{
+    margin: auto 0;
+    size: 20;
+    color: white;
+}
+.lable_created h3 {
+
+    font-size: 20px;
+    color: white;
 }
 
-.CreatePage h1 {
-    font-size: 48px;
-    font-weight: bold;
-    margin-bottom: 40px;
+.left_option p{
+    font-size: 14px;
+    color: white;
+    line-height: 20px;
 }
 
-.CreatePage h2 {
-    margin: 0;
-    font-size: 24px;
+.left_option p:hover{
+    color: rgb(66, 66, 66);
+}
+.option_created a{
+
+    width: 20%;
 }
 
-.option1 p, .option p {
-    margin: 10px 0 0;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #666;
+.icon_arrow{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    float: right;
+}
+.icon_arrow:hover{
+    color: rgb(85, 85, 85);
 }
 
-.arrow {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 24px;
-    color: #999;
-}
-
-.learn-more {
-    font-size: 16px;
-    color: #007aff;
+.option_created a{
     text-decoration: none;
 }
 
-.right-section-3 {
-    flex: 1;
-    background-color: #f2f2f2;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.right-sectionn{
+    width: 60%
 }
-
-.right-section-3 img {
+.right-sectionn img {
+    background-size: cover;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+}
+.learn-more{
+    text-decoration: none;
 }
 
 .featured-text {
@@ -91,4 +125,104 @@
     border-radius: 5px;
     font-size: 14px;
     font-weight: bold;
+} 
+
+.learn-more{
+    color: white;
+    font-weight: 400;
+}
+.learn-more:hover{
+    color: rgb(66, 66, 66);
+}
+
+
+@media screen and (max-width:992px) {
+   
+    .logo_created h1{
+        font-size: 1.5rem;
+    }
+    .logo_created img{
+        width: 2rem;
+        height: 2rem;
+    }
+    .option_created{
+        display: flex;
+    }
+    
+    .left-sectionn{
+        padding: 1rem;
+    }
+    .left_option p {
+        display: none;
+    }
+    .lable_created h3{
+        font-size: 14px;
+    }
+    .right_option{
+       margin-left: auto;
+    }
+    .learn-more{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:675px) {
+    .CreatePage{
+        padding: 1rem;
+    }
+    .create-page{
+ 
+    display: flex;
+    gap: .5rem;
+    height: 100%;
+}
+
+.option_created{
+    display: flex;
+    flex-direction:  row;
+    margin: 0 auto;
+}
+
+    .left-sectionn{
+        padding: 0;
+        margin-left: 5px;
+        width: 90%;
+     
+   
+    }
+
+    .option_created {
+        margin-bottom: 1rem;
+    }
+    .right-sectionn{
+       display: none;
+    }
+     .logo_created h1{
+        font-size: 1rem;
+    }
+    .logo_created img{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    .option_created{
+        display: flex;
+        padding: 15px;
+       
+    }
+    
+    .left-sectionn{
+        padding: 1rem;
+    }
+    .left_option p {
+        display: none;
+    }
+    .lable_created h3{
+        font-size: 12px;
+    }
+    .right_option{
+       margin-left: auto;
+    }
+    .learn-more{
+        font-size: 14px;
+    }
 }
