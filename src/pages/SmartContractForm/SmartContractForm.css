@@ -1,217 +1,107 @@
-/* .contract-form {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  .contract-form .form-header {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .contract-form .form-description {
-    font-size: 16px;
-    color: #555;
-  }
-  
-  .form-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 30px;
-    gap: 50px;
-  }
-  
-  .left-section {
-    flex: 1;
-  }
-  
-  .right-section {
-    flex: 0.8;
-    background-color: #f9f9f9;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-  }
-  
-  .logo-upload, .contract-details, .blockchain-options {
-    margin-bottom: 30px;
-  }
-  
-  .upload-box {
-    width: 100%;
-    height: 150px;
-    border: 1px dashed #bbb;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #888;
-    cursor: pointer;
-    padding: 20px;
-    background-color: #fafafa;
-    border-radius: 8px;
-  }
-  
-  .input-group {
-    margin-bottom: 20px;
-  }
-  
-  .input-group label {
-    display: block;
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 8px;
-  }
-  
-  .input-group input {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px;
-  }
-  
-  .blockchain-options .options-header {
-    font-size: 18px;
-    margin-bottom: 15px;
-  }
-  
-  .options3 {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .option3 {
-    flex: 1;
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    text-align: center;
-    background-color: #fff;
-    cursor: pointer;
-  }
-  
-  .option3.selected {
-    border-color: #003580;
-    background-color: #eef6ff;
-  }
-  
-  .advanced-settings {
-    margin-top: 40px;
-    text-align: center;
-  }
-  
-  .advanced-settings a {
-    font-size: 16px;
-    color: #0073e6;
-    text-decoration: none;
-  }
-  
-  .right-section .list {
-    list-style-type: none;
-    padding: 0;
-    margin: 20px 0;
-  }
-  
-  .right-section .list-item {
-    font-size: 16px;
-    margin-bottom: 10px;
-    color: #333;
-  }
-  
-  .right-section .section-header {
-    font-size: 18px;
-    margin-bottom: 15px;
-    color: #333;
-  }
-  
-  .right-section .section-description {
-    font-size: 14px;
-    margin-bottom: 10px;
-    color: #555;
-  }
-   */
 
   .contract-page{
     width: 100%;
     height: 100%;
-    background: yellow;
+    background: rgb(0, 0, 0);
   }
 
   .contract_container{
-    width: 70%;
+    width: 80%;
     height: 100%;
-    background: green;
     margin: 0 auto;
     display: flex;
     padding: 2rem;
+    display: flex;
+    gap: 2rem;
   }
 
   .left_contract{
-    width: 70%;
-    background: olivedrab;
+    width: 65%;
+  
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
   }
-  .right_contract{
-    width: 30%;
-    background: greenyellow;
-  }
 
-  .description{
-    background: red;
-  }
+
+
   .description a{
     text-decoration: none;
     font-weight: 600;
+    color: aliceblue;
   }
   .description a:hover{
-    color: black;
+    color: rgb(67, 67, 67);
+  }
+  .description h2{
+    color: white;
   }
   .description p{
     font-size: 14px;
+    color: white;
   }
 
 
   .logo-upload{
-    background: blue;
+  
     display: flex;
     flex-direction: column;
     gap: .5rem;
   }
-  .lable_box{
+  .lable_box_group{
     display: flex;
     flex-direction: row;
   }
+
+  .lable_box_group h3 {
+    margin-right: 3px;
+    font-size: 15px;
+    color: white;
+  }
+  .icon_lable{
+    margin: auto 0;
+    font-size: 12px;
+    color: white;
+   
+  }
   .logo-upload p{
     font-size: 20px;
-    font-weight: 700
+    font-weight: 700;
+    color: white;
   }
-  .contract-details{
-    background: brown;
+  .logo-upload h3{
+    color: white;
   }
-  .blockchain-options{
-    background: orange;
-  }
+
+
   .upload-box{
     display: flex;
     flex-direction: row;
     gap: 1rem;
+    padding: 1.5rem;
+    border: 1.5px solid rgb(255, 255, 255);
+    border-radius: 10px;
   }
-  .lable_box h3{
-    font-size: 15px;
-  }
+
   .box_img{
-    width: 30%;
-    height: 150px;
-    background: palevioletred;
+    width: 100px;
+    height: 100px;
+    border: 1.5px solid rgb(255, 255, 255);
+    border-radius: 10px;
+     display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;
   }
+.icon_upload{
+  font-size: 25px;
+  color: white;
+
+}
   .box_des{
     width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
   }
   .box_des h3{
     font-size: 15px;
@@ -234,47 +124,136 @@
     gap: 1rem;
   }
   .input-group1{
-    width: 65%;
+    width: 70%;
     display: flex;
     flex-direction: column;
+    gap: .5rem;
   }
   .input-group1 h3{
     font-size: 15px;
-    margin-bottom: .5rem;
+ 
   }
+  
   .input-group1 input{
     height: 40px;
+    border-radius: 7px;
+    border: none;
   }
   .input-group2{
     width: 30%;
         display: flex;
     flex-direction: column;
+    gap: .5rem;
   }
   .input-group2 input{
     height: 40px;
+    border-radius: 7px;
+    border: none;
   }
-  .input-group2 h3{
-    font-size: 15px;
-    margin-bottom: .5rem;
+
+ .input_group{
+  padding: 10px;
   }
   .blockchain-options{
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: .5rem;
   }
 
-  .options3{
+
+.options3 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 1rem;
+}
+
+.option3 {
+
+  border-radius: 7px;
+  width: 33%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border: 1.5px solid rgb(255, 255, 255);
+}
+
+.option3 h4{
+  font-size: 14px;
+  color: white;
+}
+
+
+.tag p {
+  color: white;
+  width: auto;
+  font-weight: 600; /* Removes any default margin from the paragraph to avoid affecting the tag size */
+}
+.tag p:hover{
+  color: rgb(127, 128, 128);
+}
+
+
+.option3 p {
+  color: white;
+  font-size: 12px; /* Default behavior */
+}
+
+
+    .right_contract{
+    width: 30%;
+    background: rgb(47, 47, 47);
+    padding: 20px;
+    border-radius: 10px;
     display: flex;
-    width: 100%;
+    flex-direction: column;
     gap: 1rem;
   }
-  .option3{
-    background: palegreen;
-    border-radius: 7px;
-    
+  .tilte_item h3{
+    font-size: 14px;
+    margin-bottom: 1rem;
+    color: white;
   }
-  .option3 p{
-    font-size: 20px;
-    font-weight: 600;
+
+  .list_des ul{
+    list-style: none;
   }
+
+  .list_des {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .list_item {
+    display: flex;
+  }
+  .icon_item {
+    font-size: 35px;
+ color: white;
+   margin: auto 0;
+  }
+
+  .lable_item{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+  }
+  .lable_item h4 {
+    font-size: 12px;
+    color: white;
+  }
+  .lable_item p {
+    font-size: 12px;
+    color: white;
+  }
+.advanced-settings a{
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: aliceblue;
+}
+.advanced-settings a:hover{
+  color: rgb(157, 157, 157);
+}

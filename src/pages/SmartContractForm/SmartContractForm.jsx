@@ -1,7 +1,16 @@
 import React, { useState } from 'react';
 import './SmartContractForm.css'
-import { GiRoundShield } from "react-icons/gi";
+
 import { BiSolidImageAdd } from "react-icons/bi";
+import { LuScrollText } from "react-icons/lu";
+import { BsStars } from "react-icons/bs";
+import { MdOutlineDraw,MdDriveFolderUpload,MdOutlineFileUpload } from "react-icons/md";
+import { FaEye } from "react-icons/fa";
+import { FaEyeLowVision,FaRegCircleDot } from "react-icons/fa6";
+
+
+
+
 
 
 const SmartContractForm = () => {
@@ -13,24 +22,24 @@ const SmartContractForm = () => {
       <div className="contract-page">
         <div className="contract_container">
           <div className="left_contract">
-
             <div className="description">
               <h2>Let's create a smart contract for your drop.</h2>
               <p>You'll need to deploy an ERC-721 contract onto the blockchain before you can create a drop.{' '} <a href="#" className="link">What is a contract?</a></p>
             </div>
             
             <div className="logo-upload">
-              <div className="lable_box">
-                <h3 className="upload-label">Logo image</h3>
-                <GiRoundShield/>
+              <div className="lable_box_group">
+                <h3>Logo image</h3>
+                <FaRegCircleDot className='icon_lable'/>
               </div>
            
                <div className="upload-box">
                   <div className="box_img">
-                    <BiSolidImageAdd className='icon_upload_img'/>
+                    <MdOutlineFileUpload className='icon_upload'/>
                   </div>
                   <div className="box_des">
                     <h3>Drag and drop or click to upload</h3>
+                    <p>You may change this after deploying your contract.</p>
                     <p>Recommended size: 350 x 350. File types: JPG, PNG, SVG, or GIF</p>
                   </div>
                </div>
@@ -38,64 +47,105 @@ const SmartContractForm = () => {
 
             <div className="contract-details">
                <div className="input-group1">
-                <div className="lable_box">
+                <div className="lable_box_group">
                  <h3>Contract name</h3>
-                   <GiRoundShield/>
+                  <FaRegCircleDot className='icon_lable'/>
                 </div>
-                 
-                  <input type="text" value={contractName} onChange={(e) => setContractName(e.target.value)} placeholder="My Collection Name"/>
+                  <input type="text" value={contractName} onChange={(e) => setContractName(e.target.value)} placeholder="My Collection Name" className='input_group'/>
               </div>
               <div className="input-group2">
-                <div className="lable_box">
+               <div className="lable_box_group">
                   <h3>Token symbol</h3>
-                   <GiRoundShield/>
+                     <FaRegCircleDot className='icon_lable'/>
                 </div>
-                 
-                 <input type="text" value={tokenSymbol} onChange={(e) => setTokenSymbol(e.target.value)} placeholder="MCN"/>
+                 <input type="text" value={tokenSymbol} onChange={(e) => setTokenSymbol(e.target.value)} placeholder="MCN" className='input_group'/>
               </div>
             </div>
 
             <div className="blockchain-options">
-              <div className="lable_box">
-                <h3 className="options-header">Blockchain</h3>
-                 <GiRoundShield/>
+              <div className="lable_box_group">
+                <h3>Blockchain</h3>
+                     <FaRegCircleDot className='icon_lable'/>
               </div>
                
                <div className="options3">
                   <div className="option3">
-                    <p>Ethereum</p>
-                    <span className="tag">Most popular</span>
-                    <small>Estimated cost to deploy contract: $13.53</small>
+                    <h4>Ethereum</h4>
+                    <div className="tag">
+                      <p>Most popular</p>
+                    </div>
+                    
+                    <p>Estimated cost to deploy contract: $13.53</p>
                   </div>
                   <div className="option3">
-                    <p>Base</p>
-                    <small>Estimated cost to deploy contract: $0.01</small>
+                    <h4>Base</h4>
+                    <div className="tag">
+                      <p>Cheaper</p>
+                    </div>
+                   
+                    <p>Estimated cost to deploy contract: $0.01</p>
                   </div>
                   <div className="option3">
-                    <p>See more options</p>
+                    <h4>See more options</h4>
                   </div>
                </div>
             </div>
-
+              <div className="advanced-settings">
+                <a href="#">Advanced settings</a>
+            </div>
 
           </div>
           <div className="right_contract">
-            <h3>After you deploy your contract you'll be able to:</h3>
-            <div className="list_des">
-               <ul>
-               <li className="list-item">Manage collection settings</li>
-               <li className="list-item">Set up your drop</li>
-               <li className="list-item">Prepare designs</li>
-            </ul>
+            <div className="doc">
+              <div className="tilte_item">
+                 <h3>After you deploy your contract you'll be able to:</h3>
+              </div>
+              <div className="list_des">
+                <div className="list_item">
+                    <LuScrollText className='icon_item'/>
+                    <div className="lable_item">
+                      <h4>Manage collection settings</h4>
+                      <p>Edit collection details earnings, and links.</p>
+                    </div>
+                </div>
+                <div className="list_item">
+                    <BsStars className='icon_item'/>
+                    <div className="lable_item">
+                      <h4>Set up your drop</h4>
+                      <p>Set up your mint schedule and presale stages.</p>
+                    </div>
+                </div>
+                <div className="list_item">
+                    <MdOutlineDraw className='icon_item'/>
+                    <div className="lable_item">
+                      <h4>Prepare designs</h4>
+                      <p>Customize your pages and upload all asset.</p>
+                    </div>
+                </div>
+              </div>
             </div>
-           <div className="list_des">
-               <h4 className="section-header">Your community:</h4>
-              <p className="section-description">Can't view your drop page or items until you publish them.</p>
-              <p className="section-description">Can view that you've deployed a contract onto the blockchain.</p>
-           </div>
-                    <div className="advanced-settings">
-          <a href="#" className="link">Advanced settings</a>
-        </div>
+            
+            <div className="doc">
+              <div className="tilte_item">
+                  <h3>Your community:</h3>
+              </div>
+              <div className="list_des">
+                <div className="list_item">
+                    <FaEyeLowVision className='icon_item'/>
+                    <div className="lable_item">
+                      <h4>Can't view</h4>
+                      <p>Your drop page or items items until you publish them.</p>
+                    </div>
+                </div>
+                <div className="list_item">
+                    <FaEye className='icon_item'/>
+                    <div className="lable_item">
+                      <h4>Can view</h4>
+                      <p>SCan view that you've deployed a contract onto the blockchain.</p>
+                    </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
