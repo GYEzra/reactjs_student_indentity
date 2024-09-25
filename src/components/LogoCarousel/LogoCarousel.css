@@ -1,7 +1,7 @@
 .logo-carousel {
     width: 100%;
     overflow: hidden;
-    margin-top:100px;
+    margin-top:50px;
     background-color: #fff;
 }
 
@@ -14,7 +14,9 @@
 }
 
 .carousel-track img {
-    max-height: 100px;
+    width: 100px;
+    height: 100px;
+    background-size: cover;
     margin: 0 2rem;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
