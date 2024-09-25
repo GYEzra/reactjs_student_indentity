@@ -15,7 +15,6 @@ const Navbar = () => {
 
   const handleUserClick = () => setShowFullMenu(!showFullMenu);
 
-  // Function to handle scroll event and change navbar background
   const handleScroll = () => {
     const headerHeight = document.querySelector('.header').offsetHeight;
     if (window.scrollY > headerHeight) {

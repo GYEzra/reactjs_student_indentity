@@ -16,6 +16,7 @@ import CreatePage from "./pages/CreatePage/CreatePage.jsx";
 import SmartContractForm from "./pages/SmartContractForm/SmartContractForm.jsx";
 import Dashboard from "./pages/Dashboard/Dashboard.jsx";
 import BinanceChart from "./pages/BinanceChart/BinanceChart.jsx";
+import SwapComponent from "./components/SwapComponent/SwapComponent.jsx";
 function App() {
   return (
     <BrowserRouter>
@@ -32,6 +33,7 @@ function App() {
         <Route path="/CreatePage" element={<CreatePage/>} />
         <Route path="/SmartContractForm" element={<SmartContractForm/>} />
         <Route path="/BinanceChart" element={<BinanceChart/>}/>
+        <Route path="/SwapComponent" element={<SwapComponent/>}/>
         <Route path="/Dashboard">
           <Route index element={<Dashboard/>} />
         </Route>
