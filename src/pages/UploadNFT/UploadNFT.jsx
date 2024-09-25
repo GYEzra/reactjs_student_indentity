@@ -2,7 +2,7 @@ import React from 'react';
 import UploadNFTComponent from '../../components/UploadNFT/UploadNFT'; 
 import './UploadNFT.css';
 import Navbar from "../../components/navbar/Navbar";
-import Header from '../../components/header/Header';
+
 const UploadNFTPage = () => {
   return (
     <div>

@@ -4,9 +4,11 @@ import './SmartContractForm.css'
 import { BiSolidImageAdd } from "react-icons/bi";
 import { LuScrollText } from "react-icons/lu";
 import { BsStars } from "react-icons/bs";
-import { MdOutlineDraw,MdDriveFolderUpload,MdOutlineFileUpload } from "react-icons/md";
-import { FaEye } from "react-icons/fa";
+import { MdOutlineDraw,MdOutlineMoreHoriz,MdOutlineFileUpload } from "react-icons/md";
+import { FaEye,FaEthereum } from "react-icons/fa";
+import { GiRoundKnob } from "react-icons/gi";
 import { FaEyeLowVision,FaRegCircleDot } from "react-icons/fa6";
+
 
 
 
@@ -70,6 +72,7 @@ const SmartContractForm = () => {
                
                <div className="options3">
                   <div className="option3">
+                    <FaEthereum color='white' className='icon_option3'/>
                     <h4>Ethereum</h4>
                     <div className="tag">
                       <p>Most popular</p>
@@ -78,6 +81,7 @@ const SmartContractForm = () => {
                     <p>Estimated cost to deploy contract: $13.53</p>
                   </div>
                   <div className="option3">
+                    <GiRoundKnob color='white' className='icon_option3'/>
                     <h4>Base</h4>
                     <div className="tag">
                       <p>Cheaper</p>
@@ -86,6 +90,7 @@ const SmartContractForm = () => {
                     <p>Estimated cost to deploy contract: $0.01</p>
                   </div>
                   <div className="option3">
+                    <MdOutlineMoreHoriz color='white' className='icon_option3'/>
                     <h4>See more options</h4>
                   </div>
                </div>

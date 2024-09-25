@@ -5,10 +5,11 @@
   position: relative;
   width: 100%;
   height: 30%;
-  background-image: url('../../../public/img/bg1.jpg'); /* Thay đổi URL thành hình ảnh nền của bạn */
+  background-image: url('../../../public/img/bg1.jpg'); 
   background-size: cover;
   background-position: center;
 }
+
 .header {
   width: 100%;
   height: 60vh;
@@ -19,7 +20,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Màu nền đen với độ mờ */
+  background-color: rgba(0, 0, 0, 0.5); 
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -56,17 +57,6 @@
   transition: background-color 0.3s ease-in-out; /* Smooth transition for background color */
 }
 
-/* Change navbar background when scrolled */
-.navbar.scrolled {
-  background-color: white;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
-}
-
-/* Update text color when navbar background is white */
-.navbar.scrolled .nav-links {
-  color: black;
-}
-
 .nav-container {
   display: flex;
   height: 100%;
@@ -75,34 +65,8 @@
   gap: 2rem;
 }
 
-.logo_nav {
-  width: 18%;
-  height: 100%;
-    padding: 0.5rem 1rem;
-}
-
-.logo_nav a {
-  display: flex;
-  text-decoration: none;
-  align-items: center;
-  text-align: center;
-  height: 100%;
-  gap: 1rem;
-}
-
-.logo_nav img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50px;
-}
-
-.logo_nav img:hover {
-  padding: 2px;
-}
 .logo_nav p {
-  font-weight: 700;
   letter-spacing: 1px;
-  font-size: 26px;
   color: white;
 }
 
@@ -113,39 +77,10 @@
   color: black;
 }
 
-.menu_nav {
-  width: 38%;
-}
-
-.nav-menu {
-  display: flex;
-  align-items: center;
-  list-style: none;
-  text-align: center;
-}
-
-.nav-item {
-  height: 80px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  
-}
-
-.nav-item_icon{
-height: 100%;
-
-margin-left: 20px;
-}
-
-.nav-links {
+ .nav-links {
   color: #ffffff;
   text-decoration: none;
-  padding: 0.5rem 1rem;
-  height: 100%;
   display: flex;
-  font-weight: 600;
-  font-size: 1rem;
   align-items: center;
 }
 
@@ -154,36 +89,90 @@ margin-left: 20px;
   transition: all 0.3s ease;
 }
 
-
-.header {
-  margin-top: 80px; /* Push the content down to avoid overlap with the navbar */
+.right_component{
+  display: flex;
+  align-items: center;
+  justify-content: end;
 }
 
 .search_nav{
-  width: 20%;
+
   border-radius: 10px;
-  height: 50%;
   display: flex;
   align-items: center;
   text-align: center;
   margin: auto 0;
   background: transparent;
-  padding: 5px;
   box-shadow: 1px 1px 1px 1px rgb(255, 255, 255);
 
+}
+.search_nav:hover{
+    border: none;
+     box-shadow: 2px 2px 2px 2px rgb(255, 255, 255);
+}
+.icon_search{
+  margin: 0 auto;
+  color: #eeeeee;
+  display: flex;
+
+}
+.search_nav input.input_search {
+  
+    background: transparent;
+    border: none;
+}
+
+input.input_search::placeholder{
+  color: #f6f6f6;
+}
+
+.wallet_nav{
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.wallet1{
+  background: transparent;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  box-shadow: 1px 1px 1px 1px rgb(255, 255, 255);
+}
+.wallet1 p{
+  color: white;
+}
+.icon_wallet,
+.icon_user {
+    color: white;
+}
+
+.user_nav{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  box-shadow: 1px 1px 1px 1px rgb(255, 255, 255);
+  cursor: pointer;
+}
+.wallet1:hover,
+.user_nav:hover{
+  box-shadow: 2px 2px 2px 2px rgb(255, 255, 255);
 }
 
 .search_nav:hover{
     border: none;
      box-shadow: 2px 2px 2px 2px rgb(255, 255, 255);
+} 
+
+.navbar.scrolled {
+  background-color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
 }
 
-.icon_search{
-  margin: 0 auto;
-  color: #eeeeee;
+.navbar.scrolled .nav-links {
+  color: black;
 }
 
-/* Thay đổi màu chữ và icon khi navbar scrolled */
 .navbar.scrolled .nav-links,
 .navbar.scrolled .logo_nav p,
 .navbar.scrolled .icon,
@@ -209,9 +198,12 @@ margin-left: 20px;
   box-shadow: 2px 2px 2px 2px rgb(84, 84, 84);
 }
 
-.navbar.scrolled .nav-icon{
+.navbar.scrolled .nav-icon,
+.navbar.scrolled .icon_wallet,
+.navbar.scrolled .icon_user{
   color: #000000;
 }
+
 
 .navbar.scrolled .wallet1:hover,
 .navbar.scrolled .user_nav:hover,
@@ -220,96 +212,21 @@ margin-left: 20px;
   background-color: white;
 }
 
-.search_nav input.input_search{
-  height: 70%;
-  width: 85%;
-  background: transparent;
-  padding: 15px;
-  border: none;
-}
-input.input_search::placeholder{
-  color: #f6f6f6;
-  font-weight: 600;
-  font-size: 14px
-}
-
-
-.wallet_nav{
-  display: flex;
-  height: 100%;
-  width: 12%;
-  align-items: center;
-  text-align: center;
-  gap: .8rem;
-}
-
-.wallet1{
-  background: transparent;
-  display: flex;
-  gap: .7rem;
-  height: 50%;
-  border-radius: 10px;
-  padding: 20px 15px;
-  text-align: center;
-  align-items: center;
-  box-shadow: 1px 1px 1px 1px rgb(255, 255, 255);
-}
-
-
-
-.wallet1:hover,
-.user_nav:hover{
-  box-shadow: 2px 2px 2px 2px rgb(255, 255, 255);
-}
-
-
-.wallet1 p{
-  font-weight: 600;
-  color: white;
-  font-size: 16px;
-}
-.icon{
-  color: white;
-}
-
-.user_nav{
-
-  border-radius: 10px;
-  padding: 10px;
-  height: 50%;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  box-shadow: 1px 1px 1px 1px rgb(255, 255, 255);
-  cursor: pointer;
-}
-
-.nav-icon {
-  display: none;
-  color: #fff;
-  font-size: 2rem;
-  cursor: pointer;
-  margin: auto 0;
-  margin-right: 20px;
- 
-}
-
-/* Full menu styles */
 .full-menu {
   display: flex;
-  position: fixed; /* Để giữ menu ở vị trí cố định */
+  position: fixed; 
   flex-direction: column;
   width: 20%;
-  height: 80vh; /* Đảm bảo chiều cao đầy đủ */
+  height: 80vh; 
   background-color: #ffffff;
-  top: 80px; /* Đặt vị trí bên dưới navbar */
-  right: 0; /* Di chuyển sang bên phải */
+  top: 80px; 
+  right: 0; 
   z-index: 10;
-  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); /* Tùy chọn: thêm bóng đổ */
-  overflow-y: auto; /* Cho phép cuộn dọc khi cần */
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); 
+  overflow-y: auto; 
 }
 
-/* Các kiểu khác */
+
 .full-menu ul {
   list-style: none;
   padding: 0;
@@ -339,109 +256,420 @@ input.input_search::placeholder{
 }
 
 
-@media screen and (max-width:1138px) {
+@media (max-width: 575.98px) {
+  .container_nav_header{
+    width: 100%;
+    height: 20%;
+
+  }
+  .header-overlay h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    width: 80%;
+    margin: 0;
+}
+.header-overlay p {
+    font-size: .8rem;
+    margin-top: .5em;
+    width: 80%;
+}
+.logo_nav img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+}
+.logo_nav p {
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 18px;
+    color: white;
+}
+.logo_nav a {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    gap: .5rem;
+}
+
+.left_component{
+  display: flex;
+  flex-direction: row;
+  width: auto;
+}
+.right_component{
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  width: auto;
+}
+.menu_nav{
+  display: none;
+  width: 10%;
+}
+.nav-icon {
+  display: flex;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.nav-container {
+    display: flex;
+    height: 25vh;
+    width: 100%;
+    gap: 1rem;
+}
   
-  .menu_nav{
-    width: 50%;
-  }
-  .search_nav{
-    width: auto;
-  }
-  .input_search{
-    display: none;
+}
+@media (max-width: 767.98px) {
+  .container-md, .container-sm, .container {
+    max-width: 720px;
   }
 }
 
-@media screen and (max-width:996px) {
 
-  
-}
-
-/* Responsive Styles */
-@media screen and (max-width: 768px) {
-
-
+@media screen and(max-width:991px) {
   
 .container_nav_header{
+    width: 100%;
+  }
+  .navbar{
+  height: 80px;
+  width: 100%;
+}
+
+.nav-container {
   display: flex;
-  flex-direction: column;
-  position: relative;
-  width: 200vw;
-  height: 400px;
-  background-image: url('../../../public/img/bg1.jpg'); /* Thay đổi URL thành hình ảnh nền của bạn */
-  background-size: cover;
-  background-position: center;
+  height: 100%;
+  width: 100%;
+  padding: 0 2rem;
+  gap: 2rem;
 }
 
 
-  .header {
-  position: relative;
-  width: 100%;
-  height: 100%;
+.left_component{
+  display: flex;
+  width: 20%;
+}
 
+.logo_nav {
+  width: 18%;
+  height: 100%;
+  padding: 0.5rem 1rem;
+}
+.logo_nav a {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  gap: 1rem;
+}
+.logo_nav img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+}
+.logo_nav img:hover {
+  padding: 2px;
+}
+.logo_nav p {
+    font-weight: 700;
+    font-size: 26px;
+}
+
+.menu_nav{
+  width: 50%;
+  height: auto;
+}
+.nav-menu{
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+}
+
+
+.nav-item {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  
+}
+
+.nav-links {
+  padding: 0.5rem 1rem;
+  height: 100%;
+  font-weight: 600;
+  font-size: 1rem;
+ 
+}
+
+.right_component{
+  width: 30%;
+  gap: 1rem;
+}
+
+.nav-item_icon{
+height: 100%;
+margin-left: 20px;
+}
+
+.search_nav{
+  width: 20vw;
+  height: 50%;
+  padding: 5px;
+
+}
+
+.search_nav.icon_search{
+  font-size: 2rem;
+}
+
+.search_nav input.input_search {
+   display: none;
+}
+
+input.input_search::placeholder{
+  font-weight: 600;
+  font-size: 14px
+}
+
+.wallet_nav{
+  height: 100%;
+  width: 12%;
+  gap: .8rem;
+}
+
+.wallet1{
+  gap: .7rem;
+  height: 50%;
+  border-radius: 10px;
+  padding: 20px 15px;
+}
+
+.wallet1 p{
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.icon_wallet ,
+.icon_user{
+    font-size: 20px;
+}
+
+.user_nav{
+  border-radius: 10px;
+  padding: 10px;
+  height: 50%;
+}
+
+.nav-icon {
+  display: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  margin: auto 0;
+  margin-right: 20px;
+ 
+}
+
+.header{
+  width: 100%;
+  height: 400px;
+  margin-top: 80px;
 }
 .header-overlay {
-  width: 100%;
-  height: 100%;
- }
-
- .header-overlay h1 {
-  font-size: 60px;
- }
-  .header-overlay p {
-  font-size: 16px;
- }
-  .navbar {
-    position: fixed;
-    width: 100%;
-  }
-    .nav-container{
-    gap: .5rem;
-  
-  }
-
-
-  .nav-menu {
-    display: none
-  }
-
-  .full-menu {
-    display: flex;
-    background: #ffffff; /* Thay đổi URL thành hình ảnh nền của bạn */
-    background-size: cover;
-    background-position: center;
-    flex-direction: column;
-    width: 100%;
-    height: 90vh;
-    position: absolute;
-    top: 80px;
-    opacity: 1;
-    transition: all 0.5s ease;
-    overflow-y: scroll;
-  }
-
-  .nav-links:hover {
-  background: #aaaaaa;
+  width: 70%;
+}
+.header-overlay h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    width: 80%;
+    margin: 0;
+}
+.header-overlay p {
+    font-size: 1.2rem;
+    margin-top: .5em;
+    width: 80%;
 }
 
- .search_nav{
-    background: transparent;
-  }
- 
-  .input_search{
-    display: none;
-  }
-  .user_nav{
-    display: none;
-  }
+}
 
-  .nav-menu.active {
-    left: 0;
-    opacity: 1;
-    transition: all 0.5s ease;
-    z-index: 1;
+@media screen and (max-width:1399px) {
+  .container_nav_header{
+    width: 100%;
   }
-  .nav-icon {
-    display: block;
-  }
+  .navbar{
+  height: 80px;
+  width: 100%;
+}
+
+.nav-container {
+  display: flex;
+  height: 100%;
+  width: 95%;
+  padding: 0 2rem;
+  gap: 2rem;
+}
+
+
+.left_component{
+  display: flex;
+  width: 20%;
+}
+
+/* logo */
+
+.logo_nav {
+  width: 18%;
+  height: 100%;
+  padding: 0.5rem 1rem;
+}
+.logo_nav a {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  gap: 1rem;
+}
+.logo_nav img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+}
+.logo_nav img:hover {
+  padding: 2px;
+}
+.logo_nav p {
+    font-weight: 700;
+    font-size: 26px;
+}
+
+.menu_nav{
+  width: 50%;
+  height: auto;
+}
+.nav-menu{
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+}
+
+
+.nav-item {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  
+}
+
+.nav-links {
+  padding: 0.5rem 1rem;
+  height: 100%;
+  font-weight: 600;
+  font-size: 1rem;
+ 
+}
+
+.right_component{
+  width: 30%;
+  gap: 1rem;
+}
+
+.nav-item_icon{
+height: 100%;
+margin-left: 20px;
+}
+
+.search_nav{
+  width: 20vw;
+  height: 50%;
+  padding: 5px;
+
+}
+
+
+.icon_search{
+  font-size: 5rem;
+}
+
+.search_nav input.input_search {
+    height: 70%;
+    width: 60vw;
+    padding: 15px;
+}
+
+input.input_search::placeholder{
+  font-weight: 600;
+  font-size: 14px
+}
+
+.wallet_nav{
+  height: 100%;
+  width: 12%;
+  gap: .8rem;
+}
+
+.wallet1{
+  gap: .7rem;
+  height: 50%;
+  border-radius: 10px;
+  padding: 20px 15px;
+}
+
+.wallet1 p{
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.icon_wallet ,
+.icon_user{
+    font-size: 20px;
+}
+
+.user_nav{
+  border-radius: 10px;
+  padding: 10px;
+  height: 50%;
+}
+
+.nav-icon {
+  display: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  margin: auto 0;
+  margin-right: 20px;
+ 
+}
+
+
+/* header */
+
+.header{
+  width: 100%;
+  height: 400px;
+  margin-top: 80px;
+}
+.header-overlay {
+  width: 70%;
+}
+.header-overlay h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    width: 80%;
+    margin: 0;
+}
+.header-overlay p {
+    font-size: 1.2rem;
+    margin-top: .5em;
+    width: 80%;
+}
+
 }
