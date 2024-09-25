@@ -37,6 +37,7 @@
   left: auto;
   background-color: var(--icons-bg-color);
   border-radius: 10px;
+  padding: 10px;
 }
 
 .tabs button {

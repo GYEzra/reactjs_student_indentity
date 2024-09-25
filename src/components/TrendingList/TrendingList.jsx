@@ -55,32 +55,30 @@ const TrendingList = () => {
   return (
     <div className="trending-container">
       <div className="topTreding">
-      <div className="tabs">
-        <button
-          className={selectedTab === "Trending" ? "active-tab" : ""}
-          onClick={() => handleTabClick("Trending")}
-        >
-          Trending
-        </button>
-        <button
-          className={selectedTab === "Top" ? "active-tab" : ""}
-          onClick={() => handleTabClick("Top")}
-        >
-          Top
-        </button>
-      </div>
-
-      <div className="timeframes">
-        {["1h", "6h", "24h", "7d"].map((time) => (
+        <div className="tabs">
           <button
-            key={time}
-            className={selectedTimeframe === time ? "active-timeframe" : ""}
-            onClick={() => handleTimeframeClick(time)}
-          >
-            {time}
+            className={selectedTab === "Trending" ? "active-tab" : ""}
+            onClick={() => handleTabClick("Trending")}>
+            Trending
           </button>
-        ))}
-      </div>
+          <button
+            className={selectedTab === "Top" ? "active-tab" : ""}
+            onClick={() => handleTabClick("Top")}>
+            Top
+          </button>
+        </div>
+
+        <div className="timeframes">
+          {["1h", "6h", "24h", "7d"].map((time) => (
+            <button
+              key={time}
+              className={selectedTimeframe === time ? "active-timeframe" : ""}
+              onClick={() => handleTimeframeClick(time)}
+            >
+              {time}
+            </button>
+          ))}
+        </div>
       </div>
 
       <table>
