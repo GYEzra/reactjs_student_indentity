@@ -72,7 +72,7 @@
     background-color: #5252b794;
     color: white;
     border-radius: 10px;
-    width: 16%;
+    width: 25%;
     text-align: center;
     padding: 10px;
     height: 40px;
@@ -93,4 +93,84 @@
     border-radius: 17px;
     padding: 20px;
     width: 50%;
+    position: relative;
+}
+.swap_button{
+    width: 100%;
+    display: flex;
+    gap: 5px;
+
+
+}
+.swap_button1{
+    width: 80%;
+    margin-right: 70px;
+    background-color: #5252b794;
+}
+.swap_button2{
+    width: 15%;
+    position: absolute;
+    right: 0;    
+    background-color: #5252b794;
+}
+.routeBox_box_fullheader{
+    display: flex;
+}
+.route_icon{
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    border-radius: 30px;
+    border: 0.5px solid black;
+    
+}
+.route_icon2{
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    border-radius: 30px;
+}
+.routeBox_box_icon{
+    display: flex;
+    margin-top: 12px;
+}
+.routeBox_box_best{
+    position: absolute;
+    right: 0;
+    margin-right: 40px;
+    background-color: rgba(172, 255, 47, 0.273);
+    padding-top:8px;
+    padding-bottom:8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 7px;
+
+}
+.routeBox_box_best h6{
+    color: green;
+}
+.routeBox_box_nameSwap{
+    display: flex;
+}
+.routeBox_box_fullfooter{
+    display: flex;
+    margin-top: 10px;
+    
+}
+.routeBox_box_icongas_full{
+    position: absolute;
+    right: 0;
+    margin-right: 40px;
+    display: flex;
+    gap:5px;
+}
+.routeBox_box_icongas_full h6{
+    font-weight: normal;
+    font-size: 15px;
+}
+.routeBox_box{
+    width: 100%;
+    border: 1.5px solid #5f5feb21;
+    padding: 15px;
+    border-radius: 20px;
 }
