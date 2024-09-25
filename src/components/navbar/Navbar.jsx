@@ -7,8 +7,6 @@ import { MdWallet,MdOutlineContactPhone,MdSubscriptions,MdAccountCircle,MdCreate
 import { RiAccountCircleFill } from "react-icons/ri";
 
 
-
-
 const Navbar = () => {
   const [click, setClick] = useState(false);
   const [showFullMenu, setShowFullMenu] = useState(false);
@@ -23,10 +21,6 @@ const handleCloseSearch = () => {
   setIsSearchActive(false); // Close the search bar
 };
   const handleUserClick = () => setShowFullMenu(!showFullMenu);
-
-  // Function to handle scroll event and change navbar background
-  
-
  return (
   <nav className='navbar'>
     {!isSearchActive ? (
