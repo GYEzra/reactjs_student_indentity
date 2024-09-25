@@ -5,9 +5,14 @@
     margin: 0 auto;
     overflow: hidden;
     display: flex;
+    flex-direction: row;
     align-items: center;
   }
   
+  .pre,
+  .next{
+    width: 10%;
+  }
   .slider-wrapper {
     display: flex;
     transition: transform 0.5s ease;

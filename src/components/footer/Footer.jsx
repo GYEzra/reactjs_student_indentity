@@ -33,7 +33,6 @@ const Footer = () => {
         
           <div className="sb__footer-links-div">
           <h4>Partnets</h4>
-         
             <a href="/"><p>Employee</p></a>
            <a href="/"><p>Employee</p></a>
             <a href="/"><p>Employee</p></a>
@@ -71,7 +70,6 @@ const Footer = () => {
         </div>
           <div className="sb__footer-links-div">
           <h4>Partnets</h4>
-         
             <a href="/"><p>Employee</p></a>
            <a href="/"><p>Employee</p></a>
             <a href="/"><p>Employee</p></a>

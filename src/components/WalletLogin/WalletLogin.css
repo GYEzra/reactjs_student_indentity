@@ -202,10 +202,14 @@
  .wallet-options{
         display: flex;
    
-        flex-direction: column;
+        flex-direction: row;
+    
     }
     .wallet-option{
-        width: 100%;
+        width: auto;
+    }
+    .wallet-option span{
+        display: none;
     }
  
     .btn{

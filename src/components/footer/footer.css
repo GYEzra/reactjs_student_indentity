@@ -22,6 +22,7 @@
   align-items: flex-start;
   flex-direction: row;
   flex-wrap: wrap;
+  gap: 1rem;
   width: 100%;
   text-align: left;
   margin-bottom: 1rem;
@@ -38,8 +39,8 @@
   color: rgb(0, 0, 0);
  }
   .sb__footer-links-div1{
-  width: 428px;
- margin: 1rem 1rem 0rem 1rem;
+  width: 700px;
+   margin: 1rem 1rem 0rem 1rem;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
@@ -49,11 +50,11 @@
  
    .sb__footer-links-div a {
         color: rgb(0, 0, 0);
-        text-decoration: none; /* Change color on hover */
+        text-decoration: none; 
     }
 
     .sb__footer-links-div a:hover {
-        color: rgb(145, 145, 145); /* Add underline on hover */
+        color: rgb(145, 145, 145); 
     }
 
 
@@ -134,12 +135,20 @@ text-decoration: none;
  }
  
 
- @media screen and (max-width:850px) {
+ @media screen and (max-width:1399px) {
   .sb__footer-heading h1{
     font-size: 44px;
     line-height: 50px;
   }
 
+ }
+
+ @media screen and (max-width:991px) {
+  
+   .sb__footer-heading h1{
+    font-size: 44px;
+    line-height: 50px;
+  }
  }
 
   @media screen and (max-width:550px) {

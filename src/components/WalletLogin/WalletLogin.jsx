@@ -9,37 +9,7 @@ const WalletLogin = () => {
     <div className="wallet">
         {/* <h4>Kết nối ví</h4> */}
         <div className="wallet-login">
-          
-            <div className="login-options">
-                <div className="social-icons">
-                    <div className="gg-icon">
-                        <img src='https://cdn-icons-png.flaticon.com/512/2875/2875331.png' alt="GG" className="icon" />
-                    </div>
-                    <div className="apple-icon">
-                        <FaApple className="icon" />
-                    </div>
-                    <div className="fb-icon">
-                    <img src='https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png' alt="FB" className="icon" />
-                    </div>
-                </div>
-                <span className="divider">or</span>
-                <input
-                    type="email"
-                    placeholder="Email address"
-                    className="login-input"
-                />
-                <div className="btn">
-                    <button className="login-btn">
-                    <MdPhone className="icon" /> Phone number
-                </button>
-                <button className="login-btn">
-                    <BsFingerprint className="icon" /> Passkey
-                </button> 
-                </div>
-               
-            </div>
-
-             <div className="wallet-options">
+          <div className="wallet-options">
                 <div className="wallet-option">
                 <img src='https://cdn-icons-png.flaticon.com/256/5969/5969358.png' alt="MetaMask" className="icon" />
                     <span>Social Login</span>
@@ -69,6 +39,36 @@ const WalletLogin = () => {
                     <span>All Wallets</span>
                 </div>
             </div>
+            <div className="login-options">
+                <div className="social-icons">
+                    <div className="gg-icon">
+                        <img src='https://cdn-icons-png.flaticon.com/512/2875/2875331.png' alt="GG" className="icon" />
+                    </div>
+                    <div className="apple-icon">
+                        <FaApple className="icon" />
+                    </div>
+                    <div className="fb-icon">
+                    <img src='https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png' alt="FB" className="icon" />
+                    </div>
+                </div>
+                <span className="divider">or</span>
+                <input
+                    type="email"
+                    placeholder="Email address"
+                    className="login-input"
+                />
+                <div className="btn">
+                    <button className="login-btn">
+                    <MdPhone className="icon" /> Phone number
+                </button>
+                <button className="login-btn">
+                    <BsFingerprint className="icon" /> Passkey
+                </button> 
+                </div>
+               
+            </div>
+
+             
         </div>
     </div>
         

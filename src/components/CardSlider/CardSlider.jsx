@@ -29,7 +29,7 @@ const cardData = [
   },
 ];
 
-const CardSlider = () => {
+const CardSlider = () => {  
   const [currentIndex, setCurrentIndex] = useState(0);
   const numVisibleCards = 4; 
 
@@ -48,11 +48,16 @@ const CardSlider = () => {
   };
 
   return (
+
     <div className="slider-container">
-      <button className="prev-btn" onClick={prevSlide}>
+      <div className="pre">
+         <button className="prev-btn" onClick={prevSlide}>
         &#8249;
       </button>
-      <div className="slider-wrapper" style={{ transform: `translateX(-${(currentIndex / cardData.length) * 100}%)` }}>
+      </div>
+     
+      <div className="card">
+        <div className="slider-wrapper" style={{ transform: `translateX(-${(currentIndex / cardData.length) * 100}%)` }}>
         {cardData.map((item, index) => (
           <div key={index} className="slider-card">
             <img src={item.imageUrl} alt={item.name} className="slider-image" />
@@ -63,9 +68,14 @@ const CardSlider = () => {
           </div>
         ))}
       </div>
-      <button className="next-btn" onClick={nextSlide}>
+      </div>
+      
+      <div className="next">
+            <button className="next-btn" onClick={nextSlide}>
         &#8250;
       </button>
+      </div>
+  
     </div>
   );
 };

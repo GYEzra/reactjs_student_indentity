@@ -1,6 +1,6 @@
 import FeaturedProducts from "../../components/FeaturedProducts/FeaturedProducts.jsx";
 import Footer from "../../components/footer/Footer";
-// import Header from "../../components/header/Header";
+import Header from "../../components/header/Header";
 import MailList from "../../components/mailList/MailList";
 import Navbar from "../../components/navbar/Navbar";
 import "./home.css";
@@ -18,9 +18,10 @@ const Home = () => {
     <div>
 
       <Navbar />
-      {/* <Header/> */}
+      <Header/>
+        <CardSlider/>
       <FeaturedProducts/>
-      <CardSlider/>
+    
       <WalletLogin/>
       <LogoCarousel/>
       <Services/>
