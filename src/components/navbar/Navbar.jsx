@@ -56,12 +56,19 @@ const handleCloseSearch = () => {
             <IoMdSearch className='icon_search' />
             <p>Search</p>
           </div>
+       
           <div className="wallet1">
-            <MdWallet className='icon_wallet' />
-            <p>Login</p>
+            <a href="/">
+              <MdWallet className='icon_wallet' />
+              <p>Login</p>
+            </a>
+         
           </div>
           <div className="user_nav">
-            <FaRegUserCircle className='icon_user' />
+            <a href="/">
+             <FaRegUserCircle className='icon_user' />
+            </a>
+           
           </div>
         </div>
       </div>
@@ -86,40 +93,30 @@ const handleCloseSearch = () => {
             </li>
             <li className="nav-item">
                <RiAccountCircleFill className='nav-item_icon'/>
-              <a href="/Dashboard" className="nav-links1">About</a>
+              <a href="/Dashboard" className="nav-links1">DashBoard</a>
             </li>
             <li className="nav-item">
                <MdOutlineContactPhone  className='nav-item_icon'/>
-              <a href="/UploadNFTPage" className="nav-links1">Contact Us</a>
+              <a href="/UploadNFTPage" className="nav-links1">Upload NFT</a>
             </li>
             <li className="nav-item">
                <FaSignInAlt className='nav-item_icon'/>
-              <a href="/UploadNFTPage" className="nav-links1">Sign in</a>
+              <a href="/" className="nav-links1">Sign in</a>
             </li>
             <li className="nav-item">
                <MdSubscriptions className='nav-item_icon'/>
-              <a href="/UploadNFTPage" className="nav-links1">Subscription</a>
+              <a href="/" className="nav-links1">Subscription</a>
             </li>
-              <li className="nav-item">
-                 <MdAccountCircle  className='nav-item_icon'/>
-              <a href="/Account" className="nav-links1">Account</a>
-            </li>
+            
             <li className="nav-item">
                <MdCreateNewFolder  className='nav-item_icon'/>
-              <a href="/Dashboard" className="nav-links1">About</a>
+              <a href="/" className="nav-links1">About</a>
             </li>
             <li className="nav-item">
                <RiAccountCircleFill className='nav-item_icon'/>
-              <a href="/UploadNFTPage" className="nav-links1">Contact Us</a>
+              <a href="/" className="nav-links1">Contact Us</a>
             </li>
-            <li className="nav-item">
-               <RiAccountCircleFill className='nav-item_icon'/>
-              <a href="/UploadNFTPage" className="nav-links1">Sign in</a>
-            </li>
-            <li className="nav-item">
-               <RiAccountCircleFill  className='nav-item_icon'/>
-              <a href="/UploadNFTPage" className="nav-links1">Subscription</a>
-            </li>
+        
           </ul>
       </div>
     )}

@@ -107,7 +107,12 @@
   justify-content: center;
 }
 
-
+.right_component a{
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  gap: .5rem;
+}
 .wallet1{
   background: transparent;
   display: flex;
@@ -181,6 +186,9 @@
 }
 
 
+.nav-item:hover{
+  background: #a0a0a0;
+}
 
 .nav-icon {
   display: flex;
