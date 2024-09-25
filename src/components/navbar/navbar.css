@@ -129,7 +129,7 @@
   display: flex;
   text-align: center;
   align-items: center;
-  box-shadow: 1px 1px 1px 1px rgb(109, 109, 109);
+   box-shadow: 1px 1px 1px 1px rgb(0, 0, 0);
   cursor: pointer;
 }
 .wallet1:hover,
@@ -180,9 +180,7 @@
   font-size: 26px;
 }
 
-.nav-item:hover{
-  background: #cdcdcd;
-}
+
 
 .nav-icon {
   display: flex;
