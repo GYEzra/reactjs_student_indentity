@@ -53,9 +53,12 @@ const Sidebar = () => {
             <span>Farm</span>
           </li>
           <p className="title">SERVICE</p>
+
           <li>
+          <Link to="/SwapComponent" style={{ textDecoration: "none" }}>
             <SwapHorizIcon className="icon" />
             <span>Swap</span>
+          </Link>
           </li>
           <li onClick={openModal}>
             <HourglassEmptyIcon className="icon" />

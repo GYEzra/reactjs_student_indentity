@@ -16,7 +16,7 @@ import CreatePage from "./pages/CreatePage/CreatePage.jsx";
 import SmartContractForm from "./pages/SmartContractForm/SmartContractForm.jsx";
 import Dashboard from "./pages/Dashboard/Dashboard.jsx";
 import BinanceChart from "./pages/BinanceChart/BinanceChart.jsx";
-import SwapComponent from "./components/SwapComponent/SwapComponent.jsx";
+import SwapComponent from "./pages/SwapComponent/SwapComponent.jsx";
 function App() {
   return (
     <BrowserRouter>
