@@ -1,11 +1,13 @@
 .balance-card {
-    background-color: #14126e;
-    color: white;
+    border: 2px solid #14126e;
+    color: black;
     border-radius: 10px;
     padding: 20px;
     width: 100%;
     text-align: center;
     font-family: Arial, sans-serif;
+    margin-left: 10px;
+    margin-top: 5px;
   }
   
   .balance-header {
@@ -20,7 +22,7 @@
     align-items: center;
     padding: 20px;
     border-radius: 10px;
-    color: white;
+    color: black;
     width: 100%;
   }
   

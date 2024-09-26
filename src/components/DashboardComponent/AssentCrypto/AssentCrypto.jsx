@@ -1,6 +1,6 @@
 import React from 'react'
-import CryptoCards from '../../components/DashboardComponent/CryptoCards/CryptoCards';
-import MyAssets from '../../components/DashboardComponent/MyAssets/MyAssets';
+import CryptoCards from '../CryptoCards/CryptoCards';
+import MyAssets from '../MyAssets/MyAssets';
 import './AssentCrypto.css'
 const AssentCrypto = () => {
   return (

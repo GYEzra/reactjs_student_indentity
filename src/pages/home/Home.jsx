@@ -24,7 +24,7 @@ const Home = () => {
       <FeaturedProducts/>
       <WalletLogin/>
       <div className="LogoCarousel">
-         <LogoCarousel/>
+        <LogoCarousel/>
       </div>
      
       <Services/>

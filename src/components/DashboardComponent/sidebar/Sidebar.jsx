@@ -43,6 +43,12 @@ const Sidebar = () => {
           </Link>
           </li>
           <li>
+          <Link to="/NFTdetail" style={{ textDecoration: "none" }}>
+            <ShowChartIcon className="icon" />
+            <span>NFTdetail</span>
+          </Link>
+          </li>
+          <li>
           <Link to="/CreatePageDashboard" style={{ textDecoration: "none" }}>
             <SmartToyIcon className="icon" />
             <span>Create Collection</span>
