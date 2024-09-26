@@ -117,7 +117,18 @@ const handleCloseSearch = () => {
                <RiAccountCircleFill className='nav-item_icon'/>
               <a href="/ContactUs" className="nav-links1">Contact Us</a>
             </li>
-        
+             <li className="nav-item">
+               <RiAccountCircleFill className='nav-item_icon'/>
+              <a href="/Changepassword" className="nav-links1">Change Password</a>
+            </li>
+              <li className="nav-item">
+               <RiAccountCircleFill className='nav-item_icon'/>
+              <a href="/Login" className="nav-links1">Login</a>
+            </li>
+              <li className="nav-item">
+               <RiAccountCircleFill className='nav-item_icon'/>
+              <a href="/Register" className="nav-links1">Register</a>
+            </li>
           </ul>
       </div>
     )}
