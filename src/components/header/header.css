@@ -49,6 +49,12 @@
   background-color: #ff7700;
 }
 
+@media screen and (max-width: 1921px) {
+  .header{
+    width: 100%;
+  }
+
+}
 /* Responsive Design for smaller screens */
 @media screen and (max-width: 1200px) {
   .header {

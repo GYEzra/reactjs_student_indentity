@@ -20,11 +20,13 @@ const Home = () => {
 
       <Navbar />
       <Header/>
-        <CardSlider/>
+      <CardSlider/>
       <FeaturedProducts/>
-    
       <WalletLogin/>
-      <LogoCarousel/>
+      <div className="LogoCarousel">
+         <LogoCarousel/>
+      </div>
+     
       <Services/>
       <TrendingList/>
       <NFTGallery/>
