@@ -22,6 +22,7 @@
   border-radius: 12px;
   box-shadow: var(--box-shadow);
   overflow: hidden;
+  margin-bottom: 50px;
 }
 
 .topTreding {

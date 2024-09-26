@@ -17,10 +17,20 @@ import SmartContractForm from "./pages/SmartContractForm/SmartContractForm.jsx";
 import Dashboard from "./pages/Dashboard/Dashboard.jsx";
 import BinanceChart from "./pages/BinanceChart/BinanceChart.jsx";
 import SwapComponent from "./pages/SwapComponent/SwapComponent.jsx";
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+import ContactUs from "./pages/ContactUs/ContactUs.jsx";
+=======
+>>>>>>> Stashed changes
 import CreatePageDashboard from "./pages/CreatePageDashboard/CreatePageDashboard.jsx";
 import AccountDashboard from "./pages/AccountDashboard/AccountDashboard.jsx";
 import AssetNFTDisplay from "./components/DashboardComponent/AssetNFTDisplay/AssetNFTDisplay.jsx";
 import AssetComponent from "./components/DashboardComponent/AssetComponent/AssetComponent.jsx";
+<<<<<<< Updated upstream
+=======
+>>>>>>> b1a052dcf57840a3f802abb71a7dd82ffac5b52c
+>>>>>>> Stashed changes
 function App() {
   return (
     <BrowserRouter>
@@ -34,6 +44,7 @@ function App() {
         <Route path="/UploadNFTPage" element={<UploadNFTPage/>} />
         <Route path="/Subscription" element={<SubscriptionPage/>} />
         <Route path="/Account" element={<Account/>} />
+        <Route path="/ContactUs" element={<ContactUs/>} />
         <Route path="/CreatePage" element={<CreatePage/>} />
         <Route path="/CreatePageDashboard" element={<CreatePageDashboard/>} />
         <Route path="/SmartContractForm" element={<SmartContractForm/>} />

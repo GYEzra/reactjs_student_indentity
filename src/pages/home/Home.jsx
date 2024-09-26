@@ -13,6 +13,7 @@ import WalletLogin from "../../components/WalletLogin/WalletLogin.jsx";
 import LogoCarousel from "../../components/LogoCarousel/LogoCarousel.jsx";
 import Service1 from "../../components/Service1/Service.jsx";
 import NFTGallery from "../../components/NFTGallery/NFTGallery.jsx";
+import ContactUs from "../ContactUs/ContactUs.jsx";
 const Home = () => {
   return (
     <div>
@@ -32,6 +33,7 @@ const Home = () => {
       <SubscriptionPlans/>
       <div className="homeContainer">
         <MailList/>
+ 
         <Footer/>
       </div>
     </div>

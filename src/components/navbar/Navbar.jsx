@@ -7,6 +7,7 @@ import { MdWallet,MdOutlineContactPhone,MdSubscriptions,MdAccountCircle,MdCreate
 import { RiAccountCircleFill } from "react-icons/ri";
 
 
+
 const Navbar = () => {
   const [click, setClick] = useState(false);
   const [showFullMenu, setShowFullMenu] = useState(false);
@@ -114,7 +115,7 @@ const handleCloseSearch = () => {
             </li>
             <li className="nav-item">
                <RiAccountCircleFill className='nav-item_icon'/>
-              <a href="/" className="nav-links1">Contact Us</a>
+              <a href="/ContactUs" className="nav-links1">Contact Us</a>
             </li>
         
           </ul>
