@@ -19,7 +19,8 @@ import BinanceChart from "./pages/BinanceChart/BinanceChart.jsx";
 import SwapComponent from "./pages/SwapComponent/SwapComponent.jsx";
 import CreatePageDashboard from "./pages/CreatePageDashboard/CreatePageDashboard.jsx";
 import AccountDashboard from "./pages/AccountDashboard/AccountDashboard.jsx";
-import AssetNFTDisplay from "./pages/AssetNFTDisplay/AssetNFTDisplay.jsx";
+import AssetNFTDisplay from "./components/DashboardComponent/AssetNFTDisplay/AssetNFTDisplay.jsx";
+import AssetComponent from "./components/DashboardComponent/AssetComponent/AssetComponent.jsx";
 function App() {
   return (
     <BrowserRouter>
@@ -40,6 +41,7 @@ function App() {
         <Route path="/SwapComponent" element={<SwapComponent/>}/>
         <Route path="/AccountDashboard" element={<AccountDashboard />}/>
         <Route path="/AssetNFTDisplay" element={<AssetNFTDisplay/>}/>
+        <Route path="/AssetComponent " element={<AssetComponent />}/>
         <Route path="/Dashboard">
           <Route index element={<Dashboard/>} />
         </Route>

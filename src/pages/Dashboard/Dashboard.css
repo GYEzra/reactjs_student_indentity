@@ -7,3 +7,12 @@
 .DashboardHomeContainer{
     width: 85%;
 }
+.DashboardHomeStatisticExchange{
+    display: flex;
+}
+.DashboardHomeStatistic{
+    width: 75%;
+}
+.DashboardHomeExchange{
+    width: 20%;
+}

@@ -1,0 +1,110 @@
+.dashboard {
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .filter-input {
+    padding: 10px;
+    width: 200px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .sort-select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .grid-icons {
+    display: flex;
+  }
+  
+  .grid-icons button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .grid-icons button:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .grid-icons button svg {
+    color: #333;
+    width: 24px;
+    height: 24px;
+  }
+  
+  .asset-list {
+    display: grid;
+    gap: 20px;
+  }
+  
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .asset-card {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .asset-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .asset-image {
+    width: 100%;
+    border-radius: 10px;
+    height: auto;
+  }
+  
+  .asset-info {
+    margin-top: 15px;
+  }
+  
+  .asset-info h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .price-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    color: #777;
+  }
+  
+  .loading {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 50px;
+  }
+  
