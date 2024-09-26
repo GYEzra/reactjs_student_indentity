@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
-import './navbar.css'; // File CSS cho styling
+import './navbar.css'; 
 import { IoMdSearch,IoMdArrowRoundBack } from "react-icons/io";
 import { FaRegUserCircle,FaLongArrowAltRight,FaSignInAlt } from "react-icons/fa";
 import { MdWallet,MdOutlineContactPhone,MdSubscriptions,MdAccountCircle,MdCreateNewFolder } from "react-icons/md";
@@ -15,11 +15,11 @@ const Navbar = () => {
 const [isSearchActive, setIsSearchActive] = useState(false);
 
 const handleSearchClick = () => {
-  setIsSearchActive(true); // Set the search bar to active
+  setIsSearchActive(true); 
 };
 
 const handleCloseSearch = () => {
-  setIsSearchActive(false); // Close the search bar
+  setIsSearchActive(false);
 };
   const handleUserClick = () => setShowFullMenu(!showFullMenu);
  return (

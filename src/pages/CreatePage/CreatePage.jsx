@@ -42,7 +42,7 @@ const CreatePage = () => {
                  <p>Create a new NFT collection or add an NFT to an existing one. Your items will display immediately. List for sale when you're ready.</p>
               </div>
 
-                <a href="/UploadNFTPage">
+                <a href="/NFTCreation">
               <div className="right_option">
                   <FaLongArrowAltRight className='icon_arrow'/>
                 </div>

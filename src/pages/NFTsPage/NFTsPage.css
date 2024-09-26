@@ -1,0 +1,9 @@
+.NFTs-Container{
+    display: flex;
+}
+.NFTs-Container-Sidebar{
+    width: 15%;
+}
+.NFTs-Container-NFT{
+    width: 85%;
+}

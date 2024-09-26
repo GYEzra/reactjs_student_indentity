@@ -50,8 +50,10 @@ const Sidebar = () => {
           </li>
 
           <li>
+          <Link to="/NFTsPage" style={{ textDecoration: "none" }}>
             <ExploreIcon className="icon" />
             <span>NFTs</span>
+          </Link>
           </li>
           <li>
           <Link to="/PoolTable" style={{ textDecoration: "none" }}>
