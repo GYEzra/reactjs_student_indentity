@@ -1,0 +1,257 @@
+.ProfileDashboard{
+  display: flex;
+}
+.accountDashboard {
+  width: 100%;
+  background: white;
+  padding: 2rem;
+ 
+}
+.accountDashboard_sidebar{
+  width: 15%;
+}
+.nav_accountDashboard {
+  width: 90%;
+  height: 100px;
+  display: flex;
+  margin-left: 5rem;
+}
+
+.text_wellcomeDashboard {
+ padding-top: 25px;
+ line-height: 30px;
+ 
+}
+
+.text_wellcomeDashboard h4 {
+  font-size: 20px;
+}
+.text_wellcomeDashboard p {
+  font-size: 18px;
+}
+
+
+.authDashboard  {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  margin-left: auto;
+  
+}
+.icon_notifyDashboard{
+  margin-right: 20px;
+}
+.authDashboard img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+
+.containerDashboard {
+  width: 90%;
+  height: auto;
+  background: rgb(233, 233, 233);
+  top: 0;
+  padding: 2rem;
+  margin: 0 auto; 
+  display: flex;
+flex-wrap: wrap;
+border-radius: 20px;
+margin-top: 10px;
+
+}
+.avatarDashboard {
+  width: 20%;
+  height: auto;
+  background: rgb(178, 178, 178);
+  border-radius: 20px;
+  margin-top: 2rem;
+  flex-direction: column;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+   background: white;
+   flex: 1;
+   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  
+}
+ .avatarDashboard img {
+  width: 8rem;
+  height: 8rem;
+  background-size: cover;
+  border-radius: 100%;
+ border: 2px solid rgb(255, 255, 255);
+}
+
+
+.upload_imgDashboard{
+  position: absolute;
+  height: 3rem;
+  width: 3rem;
+  padding: 2px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 2px 4px 4px rgb(0,0,0,0.644);
+  transform: translate(-90%);
+  background-color: #ffffff;
+  padding: .5rem;
+}
+
+.text_infoDashboard{
+  text-align: center;
+  color: #000;
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+.upload_imgDashboard .edit_iconDashboard {
+  height: 100%;
+  width: 100%;
+}
+
+button{
+ 
+  font-size:1rem;
+  margin: 20px;
+  background-color: black;
+  border-radius: 10px;
+} 
+
+
+.socialDashboard{
+    width: 40%;
+    height: auto;
+    background: white;
+    border-radius: 20px;
+
+    margin-top: 2rem;
+    padding: 2rem;
+    line-height: 30px;
+    flex: 1;
+    margin-left: 2rem;
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.socialDashboard h1{
+  margin-bottom: 3rem;
+  
+
+}
+.box_socialDashboard {
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between;
+ border-bottom: 1px solid #ddd;
+ padding: 10px 0;
+  
+}
+hr{
+    margin: 10px;
+    color: #ddd;
+}
+
+.box_socialDashboard p {
+    color: black;
+    font-size: 18px;
+    
+}
+.box_socialDashboard p:hover{
+    color: rgb(22, 27, 161);
+}
+
+
+.infoDashboard{
+    width: 80%;
+    height: auto;
+    background: white;
+    border-radius: 20px;
+    margin:  auto;
+    margin-top: 2rem;
+    padding: 2rem;
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+}
+.text_info1Dashboard{
+    line-height: 40px;
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    
+}
+
+.lable_iconDashboard{
+  width: 20%;
+  display: flex;
+  
+}
+
+.lable_iconDashboard .icon {
+  margin-top: 10px;
+  margin-right: 20px;
+}
+.lable_iconDashboard p {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+
+.info_titleDashboard{
+    width: 80%;
+    margin-left: 20px;
+}
+
+.info_titleDashboard p{
+ font-size: 18px;
+}
+
+
+
+@media screen and (max-width:850px) {
+  .accountDashboard {
+  width: 100%;
+  background: white;
+  padding: 2rem;
+
+}
+
+.navDashboard {
+  width: 100%;
+  height: 100px;
+  display: flex;
+ 
+  margin-left: 0;
+
+
+
+}
+  .containerDashboard {
+  width: 100%;
+  height: 100%;
+  background: rgb(233, 233, 233);
+  top: 0;
+
+  margin: 0 auto; 
+  flex-direction: column;
+}
+
+.avatarDashboard{
+  width: 100%;
+}
+
+.socialDashboard {
+  width: 100%;
+  margin-left: 0;
+}
+
+.infoDashboard{
+  width: 100%;
+}
+
+.lable_iconDashboard p{
+  display: none;
+}
+
+  
+}

@@ -73,8 +73,10 @@ const Sidebar = () => {
 
           <p className="title">USER</p>
           <li>
+          <Link to="/AccountDashboard" style={{ textDecoration: "none" }}>
             <AccountCircleIcon className="icon" />
             <span>Profile</span>
+          </Link>
           </li>
           <li>
             <HowToVoteIcon className="icon" />
