@@ -21,7 +21,6 @@ const InputCode = () => {
   const [Code, setCode] = useState('');
   const navigate = useNavigate();
 
-
   const handleSendVerificationCode = () => {
     const validCode = "123";
 

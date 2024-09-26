@@ -50,13 +50,13 @@ const Register = () => {
   };
 
   return (
-    <div className="background-container">
+    <div className="background-container_register">
       <img src='/img/background.jpg' alt="" />
-      <div className="wrapper">
-        <div className="form-box">
+      <div className="wrapper_register">
+        <div className="form-box_register">
           <form onSubmit={handleSubmit}>
             <h1>Đăng kí</h1>
-            <div className="input-box">
+            <div className="input-box_register">
               <input
                 type="text"
                 id="emailOrPhone"
@@ -65,9 +65,9 @@ const Register = () => {
                 onChange={(e) => setEmailOrPhone(e.target.value)}
                 required
               />
-              <FaPhoneAlt className="icon" />
+              <FaPhoneAlt className="icon_register_page" />
             </div>
-            <div className="input-box">
+            <div className="input-box_register">
               <input
                 type="text"
                 id="lastName"
@@ -76,9 +76,9 @@ const Register = () => {
                 onChange={(e) => setLastName(e.target.value)}
                 required
               />
-              <FaUserAlt className="icon" />
+              <FaUserAlt className="icon_register_page" />
             </div>
-            <div className="input-box">
+            <div className="input-box_register">
               <input
                 type="text"
                 id="middleAndFirstName"
@@ -87,9 +87,9 @@ const Register = () => {
                 onChange={(e) => setMiddleAndFirstName(e.target.value)}
                 required
               />
-              <FaUserAlt className="icon" />
+              <FaUserAlt className="icon_register_page" />
             </div>
-            <div className="input-box">
+            <div className="input-box_register">
               <input
                 type="password"
                 id="password"
@@ -98,9 +98,9 @@ const Register = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 required
               />
-              <FaLock className="icon" />
+              <FaLock className="icon_register_page" />
             </div>
-            <div className="input-box">
+            <div className="input-box_register">
               <input
                 type="password"
                 id="confirmPassword"
@@ -110,24 +110,10 @@ const Register = () => {
 
                 required
               />
-              <MdOutlinePassword className="icon" />
+              <MdOutlinePassword className="icon_register_page" />
             </div>
-            <div className="input-box">
-              <input
-                type="text"
-                id="referralCode"
-                placeholder="Mã giới thiệu (nếu có)"
-                value={referralCode}
-                onChange={(e) => setReferralCode(e.target.value)}
-              />
-              <MdOutlinePassword className="icon" />
-            </div>
-            <div className="remember-forgot">
-              <label>
-                <input type="checkbox" /> Tôi đồng ý với các điều khoản ...
-              </label>
-            </div>
-            <button className="submit">Đăng ký</button>
+    
+            <button className="submit_register">Đăng ký</button>
             <div className="register-link">
               <p>
                 Bạn đã có tài khoản? <a href="#" onClick={loginLink}>Đăng nhập</a>

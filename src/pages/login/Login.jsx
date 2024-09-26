@@ -42,13 +42,13 @@ const Login = () => {
   };
 
   return (
-    <div className="background-container">
+    <div className="background-container_login">
       <img src='/img/background.jpg' alt="" />
-      <div className="wrapper">
-        <div className="form-box">
-          <form onSubmit={handleSubmit}>
+      <div className="wrapper_login">
+        <div className="form-box_login">
+          <form onSubmit={handleSubmit} className='form_login'>
             <h1>Login</h1>
-            <div className="input-box">
+            <div className="input-box_login">
               <input
                 type="text"
                 placeholder="Người dùng"
@@ -57,9 +57,9 @@ const Login = () => {
                 onChange={(e) => setUsername(e.target.value)}
                 required
               />
-              <FaUserAlt className="icon" />
+              <FaUserAlt className="icon_login_page" />
             </div>
-            <div className="input-box">
+            <div className="input-box_login">
               <input
                 type="password"
                 placeholder="Mật khẩu"
@@ -68,15 +68,13 @@ const Login = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 required
               />
-              <FaLock className="icon" />
+              <FaLock className="icon_login_page" />
             </div>
-            <div className="remember-forgot">
-              <label>
-                <input type="checkbox" /> Nhớ mật khẩu
-              </label>
+            <div className="remember-forgot_login">
+
               <a href="/forgotpassword">Quên mật khẩu?</a>
             </div>
-            <button className="submit">Đăng nhập</button>
+            <button className="submit_login">Đăng nhập</button>
             <div className="register-link">
               <p>
                 Bạn chưa có tài khoản? <a href="#" onClick={registerLink}>Đăng ký</a>

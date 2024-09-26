@@ -1,46 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
-.background-container {
+.background-container_register {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-
     background-size: cover;
-   
 }
-.background-container img {
+
+.background-container_register img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -1; /* Ensures the image is in the background */
+    z-index: -1;
 }
 
-.wrapper {
+.wrapper_register {
     position: relative;
     width: 420px;
-    max-height: 80vh; /* Allow the wrapper to be taller than its content but not exceed the viewport height */
-    background: transparent;
-    border: 2px solid rgba(255, 255, 255, .1);
+    max-height: 80vh; /* Restrict wrapper height to allow scrolling */
+    background: transparent; /* Slight opacity for better contrast */
+    border: 2px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(30px);
-    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     color: #fff;
     display: flex;
+    flex-direction: column; /* Use column layout to support scrolling */
     align-items: center;
-    overflow: hidden;
-
-    
+    overflow: hidden; /* Ensures internal scrolling, not the container */
 }
 
-.form-box {
+.form-box_register {
     width: 100%;
-    max-height: 100%; /* Allow the form box to expand to fill the wrapper */
+    max-height: calc(80vh - 40px); /* Allow the form to take up most of the space, accounting for padding */
     padding: 40px;
-    overflow-y: auto; /* Allow vertical scrolling */
+    overflow-y: auto; /* Vertical scrolling when form content exceeds max height */
 }
 
 form h1 {
@@ -49,73 +47,56 @@ form h1 {
     margin-bottom: 20px;
 }
 
-form .input-box {
+.input-box_register {
     position: relative;
     width: 100%;
     height: 50px;
     margin: 20px 0;
+  
 }
 
-.input-box input {
+.input-box_register input {
     width: 100%;
     height: 100%;
     background: transparent;
     border: none;
     outline: none;
-    border: 2px solid rgba(255, 255, 255, .1);
+    border: 2px solid rgba(255, 255, 255, 0.1);
     border-radius: 40px;
     font-size: 16px;
     color: #fff;
+    text-align: start;
     padding: 20px 45px 20px 20px;
 }
 
-.input-box input::placeholder {
+.input-box_register input::placeholder {
     color: #fff;
 }
 
-.input-box .icon {
+.input-box_register .icon_register_page {
     position: absolute;
-    right: 20px; /* Đặt icon cách bên phải 20px */
-    top: 50%; /* Đặt icon ở giữa theo chiều dọc của input */
-    transform: translateY(-50%); /* Di chuyển icon lên 50% để căn giữa theo chiều dọc */
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
     font-size: 16px;
 }
-form .remember-forgot {
-    display: flex;
-    justify-content: space-between;
-    font-size: 14.5px;
-    margin: 20px 0;
-}
 
-.remember-forgot label input {
-    accent-color: #fff;
-    margin-right: 4px;
-}
-
-.remember-forgot a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.remember-forgot a:hover {
-    color: black;
-}
-
-form button {
+form button.submit_register {
     width: 100%;
     height: 45px;
     background: #fff;
     border: none;
     outline: none;
     border-radius: 40px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     font-size: 16px;
     color: #333;
     font-weight: 700;
+    margin: auto 0;
 }
 
-form .register-link {
+.register-link {
     font-size: 14.5px;
     text-align: center;
     margin: 20px 0 15px;

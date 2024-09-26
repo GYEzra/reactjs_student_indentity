@@ -26,6 +26,7 @@ import PoolTable from "./pages/PoolTable/PoolTable.jsx";
 import NFTCreation from "./pages/NFTCreation/NFTCreation.jsx";
 import NFTsPage from "./pages/NFTsPage/NFTsPage.jsx";
 import NFTDetail from "./pages/NFTDetail/NFTDetail.jsx";
+import ChangePassword from "./pages/ChangePassword/ChangePassword.jsx"
 function App() {
   return (
     <BrowserRouter>
@@ -52,6 +53,7 @@ function App() {
         <Route path="/NFTCreation" element={<NFTCreation/>}/>
         <Route path="/NFTsPage" element={<NFTsPage/>}/>
         <Route path="/NFTDetail" element={<NFTDetail/>}/>
+        <Route path="/ChangePassword" element={<ChangePassword/>}/>
         <Route path="/Dashboard">
           <Route index element={<Dashboard/>} />
         </Route>

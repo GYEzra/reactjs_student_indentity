@@ -1,188 +1,141 @@
-/* src/components/Login/login.css */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  
-}
-
-.background-container {
+.background-container_login {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-
     background-size: cover;
-   
 }
-.background-container img {
+
+.background-container_login img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -1; /* Ensures the image is in the background */
+    z-index: -1;
 }
 
-.wrapper {
+.wrapper_login {
     position: relative;
     width: 420px;
     height: 460px;
     background: transparent;
     border: 2px solid rgba(255, 255, 255, .1);
     backdrop-filter: blur(30px);
-    box-shadow: 0 0 10px rgba(0,0,0,.2);
+     box-shadow: 0 0 10px rgba(0,0,0,.2);
     border-radius: 10px;
-    color: #fff;
     display: flex;
     align-items: center;
     overflow: hidden;
-    transition: height .2s ease;
+    transition: height 0.2s ease;
 }
 
-.wrapper.active {
-    height: 520px;
-}
-
-.wrapper .form-box {
+.form-box_login {
     width: 100%;
     padding: 40px;
-}
-
-.wrapper .form-box.login {
-    transition: translate .18s ease;
-    translate: 0;
-}
-
-.wrapper.active .form-box.login {
-    transition: none;
-    translate: -400px;
-}
-
-.wrapper .form-box.register {
-    position: absolute;
-    transition: none;
-    transform: translateX(400px); /* Moving the element off-screen initially */
-    max-height: 80vh;
-    overflow-y: auto;
-}
-
-.wrapper .form-box.register::-webkit-scrollbar {
-    width: 6px; /* Customize the scrollbar width */
-}
-
-.wrapper .form-box.register::-webkit-scrollbar-track {
-    background: #f1f1f1; /* Scrollbar track color */
-}
-
-.wrapper .form-box.register::-webkit-scrollbar-thumb {
-    background: #cfcfcf; /* Scrollbar thumb color */
-}
-
-.wrapper .form-box.register::-webkit-scrollbar-thumb:hover {
-    background: #7f7f7f; /* Thumb color on hover */
-}
-
-.wrapper.active .form-box.register {
-    transition: transform 0.18s ease; /* Corrected transition property */
-    transform: translateX(0); /* Move the element back to its original position */
 }
 
 form h1 {
     font-size: 36px;
     text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
 }
 
-form .input-box {
+.input-box_login {
     position: relative;
     width: 100%;
     height: 50px;
     margin: 20px 0;
 }
 
-.input-box input {
+.input-box_login input {
     width: 100%;
     height: 100%;
     background: transparent;
     border: none;
     outline: none;
-    border: 2px solid rgba(255,255,255,.1);
+    border: 2px solid rgba(255, 255, 255, 0.1);
     border-radius: 40px;
     font-size: 16px;
     color: #fff;
-    padding: 20px 45px 20px 20px;
+    text-align: start;
+    padding: 0 45px 0 20px;
 }
 
-.input-box input::placeholder {
+.input-box_login input::placeholder {
     color: #fff;
 }
 
-.input-box .icon {
+.input-box_login .icon_login_page {
     position: absolute;
     right: 20px;
-    margin-top: 6px;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 16px;
-    display: flex;
-    align-items: center;
+    font-size: 18px;
+    color: #fff;
 }
 
-form .remember-forgot {
+.remember-forgot_login {
     display: flex;
     justify-content: space-between;
-    font-size: 14.5px;
-    margin: 20px 0;
+    font-size: 14px;
+    margin: 10px 0;
 }
 
-.remember-forgot label input {
+.remember-forgot_login label input {
     accent-color: #fff;
     margin-right: 4px;
 }
 
-.remember-forgot a {
+.remember-forgot_login a {
     color: #fff;
     text-decoration: none;
+    margin-left: auto;
+    
 }
 
-.remember-forgot a:hover {
-   color: black;
+.remember-forgot_login a:hover {
+    color: black;
 }
 
-form button {
+.submit_login {
     width: 100%;
     height: 45px;
     background: #fff;
     border: none;
     outline: none;
     border-radius: 40px;
-    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     font-size: 16px;
     color: #333;
     font-weight: 700;
+    margin-top: 10px;
 }
 
-form .register-link {
-    font-size: 14.5px;
+.register-link {
+    font-size: 14px;
     text-align: center;
-    margin: 20px 0 15px;
+    margin: 20px 0;
 }
 
-.register-link p a {
+.register-link p{
+    color: white;
+}
+.register-link a {
     color: #fff;
     text-decoration: none;
     font-weight: 600;
 }
 
-.register-link p a:hover {
+.register-link a:hover {
     color: black;
 }
 
-.error-message{
+.error-message {
     color: rgb(248, 88, 88);
+    text-align: center;
 }
