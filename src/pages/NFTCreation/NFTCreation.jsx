@@ -1,6 +1,7 @@
 import React from 'react';
 import './NFTCreation.css';
 
+
 const NFTCreation = () => {
   return (
     <div className='NFTCreation_CN'>
