@@ -19,6 +19,7 @@ import BinanceChart from "./pages/BinanceChart/BinanceChart.jsx";
 import SwapComponent from "./pages/SwapComponent/SwapComponent.jsx";
 import CreatePageDashboard from "./pages/CreatePageDashboard/CreatePageDashboard.jsx";
 import AccountDashboard from "./pages/AccountDashboard/AccountDashboard.jsx";
+import AssetNFTDisplay from "./pages/AssetNFTDisplay/AssetNFTDisplay.jsx";
 function App() {
   return (
     <BrowserRouter>
@@ -38,6 +39,7 @@ function App() {
         <Route path="/BinanceChart" element={<BinanceChart/>}/>
         <Route path="/SwapComponent" element={<SwapComponent/>}/>
         <Route path="/AccountDashboard" element={<AccountDashboard />}/>
+        <Route path="/AssetNFTDisplay" element={<AssetNFTDisplay/>}/>
         <Route path="/Dashboard">
           <Route index element={<Dashboard/>} />
         </Route>

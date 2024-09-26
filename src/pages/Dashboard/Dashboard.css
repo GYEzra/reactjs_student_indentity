@@ -1,0 +1,9 @@
+.DashboardHome{
+    display: flex;
+}
+.DashboardHomeSideBar{
+    width: 15%;
+}
+.DashboardHomeContainer{
+    width: 85%;
+}
