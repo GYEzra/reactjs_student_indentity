@@ -1,4 +1,4 @@
-.AssentComponentDashboard{
+.asset-component-dashboard{
     display: flex;
 }
 .asset-component {
@@ -17,10 +17,16 @@
 }
 
 .asset-title {
+    display: flex;
+    align-items: center;
     font-size: 24px;
-    margin-bottom: 12px;
-    color: #333;
+    margin-bottom: 10px;
 }
+.asset-title svg {
+    margin-right: 10px;
+    font-size: 30px; 
+}
+
 
 .asset-details {
     font-size: 16px;

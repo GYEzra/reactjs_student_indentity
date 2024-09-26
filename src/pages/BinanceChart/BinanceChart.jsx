@@ -287,8 +287,11 @@ const option = {
 
 const BinanceChart = () => {
   return (
-    <div className="Dashboard">
-         <Sidebar />
+    <div className="BinanceChartDashboard">
+        <div className="BinanceChartDashboardSB">
+        <Sidebar />
+        </div>
+        
          <div className="DashboardContainer">
             <Navbar /> 
              <div className="candlestick-chart-container">

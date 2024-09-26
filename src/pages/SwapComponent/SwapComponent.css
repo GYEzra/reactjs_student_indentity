@@ -1,7 +1,10 @@
 .swap-sidebar{
     display: flex;
+    
 }
-
+.swap-sidebar-Sidebar{
+    width: 15%;
+}
 .swap-container{
     display: flex;
     width: 80%;
@@ -18,7 +21,7 @@
     padding: 20px;
     width: 50%;
     position: relative;
-    
+    margin-top: 10px;
 }
 .swapInput{
     display:flex;
@@ -179,11 +182,7 @@
     border: 1.5px solid #5f5feb21;
     padding: 15px;
     border-radius: 20px;
-    margin-top: 10px;
 }
 .routeBox_box:hover{
     border: 1.5px solid #5252b7;
-}
-.swap-sidebar_sidebar{
-    width: 15%;
 }

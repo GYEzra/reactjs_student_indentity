@@ -15,6 +15,7 @@ const SwapComponent = () => {
     { provider: 'Uniswap', amount: '0.001136 WETH', fee: '$4.20', percentage: '-15.21%' },
     { provider: '1inch', amount: '0.001135 WETH', fee: '$5.75', percentage: '-30.34%' },
     { provider: 'KyberSwap', amount: '0.001141 WETH', fee: '$6.07', percentage: '-32.43%' },
+
   ]);
   const handleAmountChange = (e) => {
     const value = e.target.value;
@@ -25,10 +26,10 @@ const SwapComponent = () => {
   return (
     <div className='swap'> 
       <div className='swap-sidebar'>
-        <div className='swap-sidebar_sidebar'>
+        <div className='swap-sidebar-Sidebar'>
         <Sidebar/>
         </div>
-     
+      
         <div className='swap_full'>
           <Navbar/>
           <div className='swap-container'>

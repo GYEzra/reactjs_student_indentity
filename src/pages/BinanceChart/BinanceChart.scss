@@ -1,3 +1,12 @@
+.BinanceChartDashboard{
+  display: flex;
+}
+.BinanceChartDashboardSB{
+  width: 15%;
+}
+.DashboardContainer{
+  width: 75%;
+}
 .candlestick-chart-container {
     margin-top:100px;
     background-color: white ; 
@@ -15,4 +24,6 @@
     background-color: #333;  
     color: #fff;
   }
+  
+  
   
