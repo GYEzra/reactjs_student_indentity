@@ -1,41 +1,49 @@
 import React from 'react';
-import './MyAssets.css';
-
+import './MyAssets.css'; // External CSS for styling
+import { FaEye } from "react-icons/fa6";
+import { IoArrowUpCircleOutline } from "react-icons/io5";
+import { IoArrowDownCircleOutline } from "react-icons/io5";
+import { BiTransfer } from "react-icons/bi";
 const MyAssets = () => {
   return (
-    <div className="assets-container">
-      <div className="balance-section">
-        <div className="balance-header">
-          <h3>Total Balance</h3>
-          <span className="balance-amount">$26,126.20</span>
-        </div>
-        <div className="balance-percentages">
-          <div className="percentage">1d % <span className="green">2.35%</span></div>
-          <div className="percentage">1w % <span className="red">-0.60%</span></div>
-          <div className="percentage">1m % <span className="green">1.49%</span></div>
-        </div>
-        <div className="balance-actions">
-          <button className="action-btn">Deposit</button>
-          <button className="action-btn">Transfer</button>
-          <button className="action-btn">Withdraw</button>
-        </div>
+    <div className="balance-card">
+      <div className="balance-header">
+        <span>Total Balance</span>
+        <div> <FaEye /></div>
       </div>
-
-      <div className="crypto-assets">
-        <div className="crypto-item">
-          <img src="/bitcoin.png" alt="Bitcoin" />
-          <span className="crypto-name">Bitcoin</span>
-          <span className="crypto-change green">2.35%</span>
+        <div className='assent_balance'>
+            <div className="balance-amount">
+                <h1>$26,126.20</h1>
+            </div>
+            <div className="percentage-changes">
+                <div className="percent-item">
+                    <span>1d %</span>
+                    <p className="percent-up">↗ 2.35%</p>
+                </div>
+                <div className="percent-item">
+                    <span>1w %</span>
+                    <p className="percent-down">↘ 0.60%</p>
+                </div>
+                <div className="percent-item">
+                    <span>1m %</span>
+                    <p className="percent-up">↗ 1.49%</p>
+                </div>
+            </div>
         </div>
-        <div className="crypto-item">
-          <img src="/ethereum.png" alt="Ethereum" />
-          <span className="crypto-name">Ethereum</span>
-          <span className="crypto-change red">-0.95%</span>
-        </div>
-        <div className="crypto-item">
-          <img src="/dogecoin.png" alt="Dogecoin" />
-          <span className="crypto-name">Dogecoin</span>
-          <span className="crypto-change green">2.35%</span>
+      <div className="action-buttons">
+        <div className="buttons-container">
+            <div className="deposit-btn">
+                <IoArrowUpCircleOutline />
+                <span>Deposit</span>
+            </div>
+            <div className="transfer-btn">
+                <BiTransfer />
+                <span>Transfer</span>
+            </div>
+            <div className="withdraw-btn">
+                <IoArrowDownCircleOutline />
+                <span>Withdraw</span>
+            </div>
         </div>
       </div>
     </div>

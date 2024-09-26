@@ -1,106 +1,138 @@
-.assets-container {
-    display: flex;
-    flex-direction: column;
-    background-color: #f9fafc;
-    padding: 20px;
-    gap: 20px;
-    font-family: Arial, sans-serif;
-  }
-  
-  .balance-section {
-    background-color: #1e2d50;
-    border-radius: 12px;
-    padding: 20px;
+.balance-card {
+    background-color: #14126e;
     color: white;
-    position: relative;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    font-family: Arial, sans-serif;
   }
   
   .balance-header {
     display: flex;
+    font-size: 14px;
+    gap: 10px;
+  }
+  
+  .assent_balance {
+    display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    width: 100%;
   }
   
-  .balance-header h3 {
+  .balance-amount h1 {
+    font-size: 48px;
     margin: 0;
-    font-size: 18px;
-    opacity: 0.8;
+    font-weight: bold;
+    letter-spacing: 1px;
   }
   
-  .balance-amount {
-    font-size: 36px;
+  .percentage-changes {
+    display: flex;
+    gap: 20px; 
+  }
+  
+  .percent-item {
+    text-align: right;
+    font-size: 14px;
+  }
+  
+  .percent-item span {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .percent-up {
+    color: #4CAF50;
+    font-size: 16px;
     font-weight: bold;
   }
   
-  .balance-percentages {
+  .percent-down {
+    color: #F44336;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .action-buttons {
     display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
+    justify-content: space-around;
   }
   
-  .percentage {
-    font-size: 14px;
-    opacity: 0.7;
-  }
   
-  .green {
-    color: #2ecc71;
-  }
-  
-  .red {
-    color: #e74c3c;
-  }
-  
-  .balance-actions {
-    display: flex;
-    gap: 10px;
-    margin-top: 20px;
-  }
-  
-  .action-btn {
-    background-color: #243b6b;
+  .deposit-btn,
+  .transfer-btn,
+  .withdraw-btn
+   {
+    background-color: #373598;
     border: none;
-    border-radius: 8px;
+    border-radius: 5px;
     padding: 10px 15px;
     color: white;
     font-size: 14px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    width: 80px;
   }
   
-  .action-btn:hover {
-    background-color: #345a92;
+  .deposit-btn,
+  .transfer-btn,
+  .withdraw-btn:hover {
+    background-color: #272579;
   }
-  
-  .crypto-assets {
+  .buttons-container {
     display: flex;
-    gap: 20px;
+    justify-content: space-around;
+    gap: 15px;
   }
   
-  .crypto-item {
+  .deposit-btn,
+  .transfer-btn,
+  .withdraw-btn {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    background-color: white;
-    border-radius: 12px;
-    padding: 15px;
-    width: 110px;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .crypto-item img {
-    width: 40px;
-    height: 40px;
-  }
-  
-  .crypto-name {
-    margin-top: 10px;
+    justify-content: center;
+    width: 150px;
+    padding: 12px;
+    border-radius: 5px;
     font-size: 16px;
-    font-weight: 500;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
   }
   
-  .crypto-change {
-    margin-top: 5px;
-    font-size: 14px;
+  .deposit-btn svg,
+  .transfer-btn svg,
+  .withdraw-btn svg {
+    margin-right: 8px;
+    font-size: 24px;
+  }
+  
+  .deposit-btn {
+    background-color: #4CAF50;
+  }
+  
+  .deposit-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .transfer-btn {
+    background-color: #373598;
+  }
+  
+  .transfer-btn:hover {
+    background-color: #2f2c7c;
+  }
+  
+  .withdraw-btn {
+    background-color: #F44336;
+  }
+  
+  .withdraw-btn:hover {
+    background-color: #e53935;
   }
   

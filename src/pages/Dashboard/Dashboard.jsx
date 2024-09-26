@@ -3,11 +3,10 @@ import Navbar from "../../components/DashboardComponent/navbar/Navbar";
 import "./Dashboard.css";
 import AssetNFTDisplay from "../../components/DashboardComponent/AssetNFTDisplay/AssetNFTDisplay.jsx";
 import AssetComponent from "../../components/DashboardComponent/AssetComponent/AssetComponent.jsx";
-import MyAssets from "../../components/DashboardComponent/MyAssets/MyAssets.jsx";
 import History from "../../components/DashboardComponent/History/History.jsx";
 import Statistic from "../../components/DashboardComponent/Statistic/Statistic.jsx";
 import Exchange from "../../components/DashboardComponent/Exchange/Exchange.jsx";
-
+import AssentCrypto from "../AssentCrypto/AssentCrypto.jsx";
 const Dashboard = () => {
   return (
     <div className="DashboardHome">
@@ -16,10 +15,7 @@ const Dashboard = () => {
       </div>   
       <div className="DashboardHomeContainer">
         <Navbar /> 
-        <AssetNFTDisplay/>
-        <AssetComponent/>
-        <MyAssets/>
-        <History/>
+        <AssentCrypto/>
         <div className='DashboardHomeStatisticExchange'>
           <div className="DashboardHomeStatistic">
             <Statistic />
@@ -28,6 +24,10 @@ const Dashboard = () => {
             <Exchange />
           </div>
       </div>
+        <AssetNFTDisplay/>
+        <AssetComponent/>
+        <History/>
+       
       </div>
     </div>
   );

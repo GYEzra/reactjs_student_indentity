@@ -1,0 +1,10 @@
+.assentCrypto{
+    display: flex;
+    width: 100%;
+}
+.assentCryptoCards{
+    width: 55%; 
+}
+.assentMyAssets{
+    width: 45%; 
+}
