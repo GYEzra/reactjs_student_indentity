@@ -30,8 +30,10 @@ const Sidebar = () => {
         <ul>
           <p className="title">MAIN</p>
           <li>
+          <Link to="/Dashboard" style={{ textDecoration: "none" }}>
             <HomeIcon className="icon" />
             <span>Home</span>
+          </Link>
           </li>
           <p className="title">LISTS</p>
           <li>
