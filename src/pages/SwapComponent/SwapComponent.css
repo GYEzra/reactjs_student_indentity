@@ -67,6 +67,10 @@
 }
 .swapInput_cointainer{
     width: 80%;
+    
+}
+.swapInput_input:disabled {
+    background-color: transparent; 
 }
 .select_swap{
     border: none;

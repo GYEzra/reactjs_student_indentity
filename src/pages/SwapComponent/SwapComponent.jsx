@@ -10,6 +10,19 @@ const SwapComponent = () => {
   const [amount,setAmount]=useState('');
   const [convertedAmount,setConvertedAmount]=useState('');
   const [coinType,setCoinType]=useState('USDC');
+  const [routes] = useState([
+    { provider: 'ParaSwap', amount: '0.001166 WETH', fee: '$3.26', percentage: '-10.21%'  },
+    { provider: 'Uniswap', amount: '0.001136 WETH', fee: '$4.20', percentage: '-15.21%' },
+    { provider: '1inch', amount: '0.001135 WETH', fee: '$5.75', percentage: '-30.34%' },
+    { provider: 'KyberSwap', amount: '0.001141 WETH', fee: '$6.07', percentage: '-32.43%' },
+    { provider: 'Odos', amount: '0.001181 WETH', fee: '$7.81', percentage: '-41.33%' },
+  ]);
+  const handleAmountChange = (e) => {
+    const value = e.target.value;
+    setAmount(value);
+    const conversionRate = 0.00116585; 
+    setConvertedAmount((value * conversionRate).toFixed(8));
+  };
   return (
     <div className='swap'> 
       <div className='swap-sidebar'>
@@ -29,9 +42,9 @@ const SwapComponent = () => {
                   <div className='swapInput_cointainer'>
                     <input
                       type="number"
-                      placeholder='0'
+                      placeholder="0"
                       value={amount}
-                      onChange={(e)=>setAmount(e.target.value)}
+                      onChange={handleAmountChange}
                       className='swapInput_input'
                     />
                     <h4>~$3.00 USD</h4>
@@ -40,7 +53,7 @@ const SwapComponent = () => {
                         <h6> 0  Max</h6>
                       </div>
                     </div>
-                    <select 
+                    <select  
                       value={coinType} 
                       onChange={(e)=>setCoinType(e.target.value)}
                       className='select_swap'
@@ -53,10 +66,9 @@ const SwapComponent = () => {
                 <div className='swapInput'>
                   <div className='swapInput_cointainer'>
                     <input
-                      type="number"
-                      placeholder='0'
-                      value={amount}
-                      onChange={(e)=>setAmount(e.target.value)}
+                     type="text"
+                     value={`${convertedAmount} WETH`}
+                     disabled
                       className='swapInput_input'
                     />
                     <h4>~$3.00 USD</h4>
@@ -96,6 +108,7 @@ const SwapComponent = () => {
               <div className="routesBox">
                 <h3>Routes</h3>
                 <br/>
+                {routes.map((route, index) => (
                 <div className='routeBox_box'>
                   <div className='routeBox_box_fullheader'>
                     <div className='routeBox_box_icon'>
@@ -104,10 +117,10 @@ const SwapComponent = () => {
                         alt='icon1'
                         className='route_icon'
                       />
-                      <h5>0.001166 WETH</h5>
+                      <h5>{route.amount}</h5>
                     </div>
                     <div className='routeBox_box_best'>
-                      <h6>Best</h6>
+                      <h6>{route.percentage}</h6>
                     </div>
                   </div>
                  <div className='routeBox_box_fullfooter'>
@@ -118,86 +131,20 @@ const SwapComponent = () => {
                           alt='icon2'
                           className='route_icon2'
                         />
-                        <h6>ParaSwap</h6>
+                        <h6>{route.provider}</h6>
                         
                     </div>
                    <div className='routeBox_box_icongas_full'>
                       <div className='routeBox_box_icongas'>
                         <FaGasPump />
                       </div>
-                      <h6>$3.26</h6>
+                      <h6>{route.fee}</h6>
                    </div>
                  </div>
                 </div>
+                ))}
                 <br/>
-                <div className='routeBox_box'>
-                  <div className='routeBox_box_fullheader'>
-                    <div className='routeBox_box_icon'>
-                      <img
-                        src='https://png.pngtree.com/element_origin_min_pic/16/11/02/bd886d7ccc6f8dd8db17e841233c9656.jpg'
-                        alt='icon1'
-                        className='route_icon'
-                      />
-                      <h5>0.001166 WETH</h5>
-                    </div>
-                    <div className='routeBox_box_best'>
-                      <h6>Best</h6>
-                    </div>
-                  </div>
-                 <div className='routeBox_box_fullfooter'>
-                    <div className='routeBox_box_nameSwap'>
-                        <h6>via</h6>
-                        <img
-                          src='https://media.istockphoto.com/id/1345681613/vi/vec-to/creative-people-logo-vector-thi%E1%BA%BFt-k%E1%BA%BF-c%C3%B3-th%E1%BB%83-thay-%C4%91%E1%BB%95i-eps-10.jpg?s=612x612&w=0&k=20&c=Tfj-b_0b8crwl6ewj3DVUHsNWjEKSchD3n3pknIOH4s='
-                          alt='icon2'
-                          className='route_icon2'
-                        />
-                        <h6>ParaSwap</h6>
-                        
-                    </div>
-                   <div className='routeBox_box_icongas_full'>
-                      <div className='routeBox_box_icongas'>
-                        <FaGasPump />
-                      </div>
-                      <h6>$3.26</h6>
-                   </div>
-                 </div>
-                </div>
-                <br/>
-                <div className='routeBox_box'>
-                  <div className='routeBox_box_fullheader'>
-                    <div className='routeBox_box_icon'>
-                      <img
-                        src='https://png.pngtree.com/element_origin_min_pic/16/11/02/bd886d7ccc6f8dd8db17e841233c9656.jpg'
-                        alt='icon1'
-                        className='route_icon'
-                      />
-                      <h5>0.001166 WETH</h5>
-                    </div>
-                    <div className='routeBox_box_best'>
-                      <h6>Best</h6>
-                    </div>
-                  </div>
-                 <div className='routeBox_box_fullfooter'>
-                    <div className='routeBox_box_nameSwap'>
-                        <h6>via</h6>
-                        <img
-                          src='https://media.istockphoto.com/id/1345681613/vi/vec-to/creative-people-logo-vector-thi%E1%BA%BFt-k%E1%BA%BF-c%C3%B3-th%E1%BB%83-thay-%C4%91%E1%BB%95i-eps-10.jpg?s=612x612&w=0&k=20&c=Tfj-b_0b8crwl6ewj3DVUHsNWjEKSchD3n3pknIOH4s='
-                          alt='icon2'
-                          className='route_icon2'
-                        />
-                        <h6>ParaSwap</h6>
-                        
-                    </div>
-                   <div className='routeBox_box_icongas_full'>
-                      <div className='routeBox_box_icongas'>
-                        <FaGasPump />
-                      </div>
-                      <h6>$3.26</h6>
-                   </div>
-                 </div>
-                </div>
-                <br/>
+
               </div>
           </div>
         </div>
