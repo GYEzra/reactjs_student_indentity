@@ -1,6 +1,7 @@
 .swap-sidebar{
     display: flex;
 }
+
 .swap-container{
     display: flex;
     width: 80%;
@@ -173,4 +174,7 @@
     border: 1.5px solid #5f5feb21;
     padding: 15px;
     border-radius: 20px;
+}
+.routeBox_box:hover{
+    border: 1.5px solid #5252b7;
 }
