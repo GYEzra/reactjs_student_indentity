@@ -41,9 +41,12 @@ const Sidebar = () => {
           </Link>
           </li>
           <li>
+          <Link to="/CreatePageDashboard" style={{ textDecoration: "none" }}>
             <SmartToyIcon className="icon" />
-            <span>Trading Bot</span>
+            <span>Create Collection</span>
+          </Link>
           </li>
+
           <li>
             <ExploreIcon className="icon" />
             <span>NFTs</span>
