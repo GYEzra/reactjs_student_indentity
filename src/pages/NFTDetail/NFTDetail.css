@@ -95,7 +95,7 @@
     gap: 10px;
 }
   
-.buy-now-btn1, .place-bid-btn1 {
+.sell-now-btn1, .place-bid-btn1 {
     padding: 12px 20px;
     font-size: 16px;
     border-radius: 8px;
@@ -191,4 +191,24 @@
 .usd-amount1 {
     font-size: 12px;
     color: #888;
+}
+.nft-title1-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nft-title1-icons {
+    display: flex;
+    gap: 16px;
+}
+
+.nft-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #000;
+    padding: 0;
+    margin: 0;
 }

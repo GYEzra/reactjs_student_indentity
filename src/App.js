@@ -27,6 +27,7 @@ import NFTCreation from "./pages/NFTCreation/NFTCreation.jsx";
 import NFTsPage from "./pages/NFTsPage/NFTsPage.jsx";
 import NFTDetail from "./pages/NFTDetail/NFTDetail.jsx";
 import ChangePassword from "./pages/ChangePassword/ChangePassword.jsx"
+import TransferItem from "./pages/TransferItem/TransferItem.jsx";
 function App() {
   return (
     <BrowserRouter>
@@ -54,6 +55,7 @@ function App() {
         <Route path="/NFTsPage" element={<NFTsPage/>}/>
         <Route path="/NFTDetail" element={<NFTDetail/>}/>
         <Route path="/ChangePassword" element={<ChangePassword/>}/>
+        <Route path="/TransferItem" element={<TransferItem/>}/>
         <Route path="/Dashboard">
           <Route index element={<Dashboard/>} />
         </Route>

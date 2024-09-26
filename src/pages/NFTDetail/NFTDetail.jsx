@@ -1,14 +1,29 @@
-import React from "react";
+import React,{useState} from "react";
 import "./NFTDetail.css";
 import { FaEye, FaHeart, FaShareAlt } from "react-icons/fa";
-
+import { IoMdSend } from "react-icons/io";
+import { CiShare1 } from "react-icons/ci";
+import { CiMenuKebab } from "react-icons/ci";
+import { Link } from "react-router-dom";
+import ShareNFTModal from "../../components/DashboardComponent/ShareNFTModal/ShareNFTModal";
+import BuyModal from "../../components/DashboardComponent/BuyModal/BuyModal";
+import SellModal from "../../components/DashboardComponent/SellModal/SellModal";
 const NFTDetail = () => {
   const bids = [
     { name: "Esther Howard", avatar: "https://png.pngtree.com/png-clipart/20230108/original/pngtree-nft-avatar-vector-element-png-image_8887536.png", bid: "2.65 ETH", time: "3 hours ago" },
     { name: "Robert Fox", avatar: "https://png.pngtree.com/png-clipart/20230108/original/pngtree-nft-avatar-vector-element-png-image_8887536.png", bid: "2.65 ETH", time: "3 hours ago" },
     { name: "Bessie Cooper", avatar: "https://png.pngtree.com/png-clipart/20230108/original/pngtree-nft-avatar-vector-element-png-image_8887536.png", bid: "2.65 ETH", time: "3 hours ago" },
   ];
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isBuyModalOpen, setIsBuyModalOpen] = useState(false);
+  const [isSellModalOpen, setIsSellModalOpen] = useState(false);
 
+  const openSellModal = () => setIsSellModalOpen(true);
+  const closeSellModal = () => setIsSellModalOpen(false);
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+  const openBuyModal = () => setIsBuyModalOpen(true);
+  const closeBuyModal = () => setIsBuyModalOpen(false);
   return (
     <div className="nft-detail-container1">
       <div className="nft-main1">
@@ -22,7 +37,23 @@ const NFTDetail = () => {
           </div>
         </div>
         <div className="nft-info-section1">
-          <h1 className="nft-title1">Creative Artistic Design</h1>
+        <div className="nft-title1-container">
+        <h1 className="nft-title1">Creative Artistic Design</h1>
+        <div className="nft-title1-icons">
+            <Link to="/TransferItem" className="nft-icon play-icon">
+                <IoMdSend />
+            </Link>
+            <Link onClick={openModal} className="nft-icon share-icon">
+                <CiShare1 />
+            </Link>
+            <ShareNFTModal isOpen={isModalOpen} onClose={closeModal} />
+            <Link to="/more-options" className="nft-icon more-icon">
+                <CiMenuKebab />
+            </Link>
+        </div>
+         </div>
+
+        
           <p className="nft-id1">NFT ID : 2548859</p>
           <div className="nft-stats1">
             <div><FaEye /> 200</div>
@@ -44,8 +75,10 @@ const NFTDetail = () => {
             Unit of data stored on a digital ledger, called a blockchain, that certifies a digital asset to be unique and therefore not interchangeable...
           </p>
           <div className="nft-actions1">
-            <button className="buy-now-btn1">Buy Now</button>
-            <button className="place-bid-btn1">Place a Bid</button>
+            <button className="sell-now-btn1" onClick={openSellModal}>Sell</button>
+            <SellModal isOpen={isSellModalOpen} onClose={closeSellModal} />
+            <button className="place-bid-btn1" onClick={openBuyModal}>Buy Now</button>
+            <BuyModal isOpen={isBuyModalOpen} onClose={closeBuyModal} />
           </div>
           <div className="nft-bids-section1">
             <h2>Bids</h2>
@@ -70,10 +103,8 @@ const NFTDetail = () => {
                 </div>
             ))}
         </div>
-
         </div>
       </div>
-      
     </div>
   );
 };
