@@ -49,13 +49,7 @@ const Navbar = () => {
           <div className="item">
             <ListOutlinedIcon className="icon" />
           </div>
-          <div className="item">
-            <img
-              src="https://cdn.24h.com.vn/upload/4-2019/images/2019-10-31/1572488402-287-hot-girl-tu-linh-mu-song-ra-sao-sau-2-nam-ket-hon-voi-doanh-nhan-dien-trai-tulinh-0-1572432546-width660height470.jpg"
-              alt=""
-              className="avatar"
-            />
-          </div>
+         
           <div className="item">
             <button className="connect-button" onClick={handleClick}>
               CONNECT
