@@ -54,8 +54,10 @@ const Sidebar = () => {
             <span>NFTs</span>
           </li>
           <li>
+          <Link to="/PoolTable" style={{ textDecoration: "none" }}>
             <DnsIcon className="icon" />
             <span>Farm</span>
+            </Link>
           </li>
           <p className="title">SERVICE</p>
 

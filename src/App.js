@@ -22,6 +22,8 @@ import CreatePageDashboard from "./pages/CreatePageDashboard/CreatePageDashboard
 import AccountDashboard from "./pages/AccountDashboard/AccountDashboard.jsx";
 import AssetNFTDisplay from "./components/DashboardComponent/AssetNFTDisplay/AssetNFTDisplay.jsx";
 import AssetComponent from "./components/DashboardComponent/AssetComponent/AssetComponent.jsx";
+import PoolTable from "./pages/PoolTable/PoolTable.jsx";
+import NFTCreation from "./components/NFTCreation/NFTCreation.jsx";
 function App() {
   return (
     <BrowserRouter>
@@ -44,6 +46,8 @@ function App() {
         <Route path="/AccountDashboard" element={<AccountDashboard />}/>
         <Route path="/AssetNFTDisplay" element={<AssetNFTDisplay/>}/>
         <Route path="/AssetComponent " element={<AssetComponent />}/>
+        <Route path="/PoolTable" element={<PoolTable/>}/>
+        <Route path="/NFTCreation" element={<NFTCreation/>}/>
         <Route path="/Dashboard">
           <Route index element={<Dashboard/>} />
         </Route>

@@ -1,0 +1,101 @@
+.farm-table-cointainer{
+    width: 100%;
+    display: flex;
+}
+.farm-table-sideBar{
+    width: 15%;
+}
+.farm-table {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+    
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .farm-table-header,
+  .farm-row {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.5fr 1fr;
+    padding: 10px 20px;
+    text-align: left;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 20px;
+  }
+  
+  .farm-table-header {
+    font-weight: bold;
+    background-color: #f9f9f9;
+  }
+  
+  .farm-row {
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .pool {
+    display: flex;
+    align-items: center;
+  }
+  
+  .pool-icon {
+    width: 30px;
+    height: 30px;
+    background-color: #eee;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .annualized {
+    font-size: 12px;
+    color: #888;
+  }
+  
+  .farm-row div {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  /* Expanded section */
+  .farm-details {
+    background-color: #f7f8fa;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .staking-info {
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    padding: 10px;
+    background-color: #eee;
+    border-radius: 5px;
+  }
+  
+  .input-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .input-section input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+  }
+  
+  .approve-btn {
+    background-color: #111;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    cursor: pointer;
+  }
